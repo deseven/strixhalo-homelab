@@ -17,7 +17,7 @@ Since GMK are putting them on their Google Drive for no reason, here are the cop
 ### Cooling
 EVO-X2 has a decent cooling system for its size and the used thermal interfaces are great as well, so changing thermal paste for example to even something like Noctua NT-H2 won't change much.
 
-Still, in the performance mode (140W boost, 120W constant) the stock solution is not good enough and the bottleneck is definitely in the heat transfer between the SoC and the radiator. The solution for that is reasonably simple - replacing the thermal paste with Honeywell PTM7950 or similar products. You'll need a 30x30 mm piece of 0.2-0.25 mm thickness. You can expect improvement of about 8 to 15 degrees, depending on the task.
+Still, in the performance mode (140W boost, 120W constant) the stock solution is not good enough and the bottleneck is definitely in the heat transfer between the APU and the radiator. The solution for that is reasonably simple - replacing the thermal paste with Honeywell PTM7950 or similar products. You'll need a 30x30 mm piece of 0.2-0.25 mm thickness. You can expect improvement of about 8 to 15 degrees, depending on the task.
 
 More info here: https://www.reddit.com/r/GMKtec/comments/1l81j5b/upgrading_gmktec_evox2_cooling/
 
