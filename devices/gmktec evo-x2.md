@@ -3,6 +3,10 @@ First available mini PC with Strix Halo, available in 64G and 128G versions.
 
 https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
 
+### Reviews
+ - https://www.youtube.com/watch?v=UXjg6Iew9lg
+ - https://www.youtube.com/watch?v=hPSMGpHQX6k
+
 ### Drivers & BIOS
 Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software).
 
@@ -14,7 +18,8 @@ Still, in the performance mode (140W boost, 120W constant) the stock solution is
 More info here: https://www.reddit.com/r/GMKtec/comments/1l81j5b/upgrading_gmktec_evox2_cooling/
 
 ### Hardware
-**Backside fan:** 120x25 mm  
-**RAM thermal pads thickness:** 0.5 mm
+ - Disassembly video: https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/
+ - Backside fan: 120x25 mm
+ - RAM thermal pads thickness: 0.5 mm
 
-![](/Home/a/gmktec-evo-x2-board.jpeg)
+![GMKtec EVO-X2 board](/Home/a/gmktec-evo-x2-board.jpeg)
