@@ -22,4 +22,4 @@ Some real-life examples (KoboldCPP, Vulkan):
 Much more info here: https://llm-tracker.info/_TOORG/Strix-Halo
 
 ### Image/Video Generation
-Didn't play with it too much yet, but looks like here the memory bandwidth limitations strike the most. With SDXL you can generate an image every 4-5 seconds, but going to something like Flux will lead to wait times of several minutes.
+Didn't play with it too much yet, but looks like here the memory bandwidth and GPU performance limitations strike the most. With SDXL you can generate an image every 4-5 seconds, but going to something like Flux will lead to wait times of several minutes.
