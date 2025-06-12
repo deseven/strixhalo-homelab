@@ -1,4 +1,4 @@
-# iGPU Passthrough
+# VM iGPU Passthrough
 
 ### Setting Up
 This guide seems to work for Strix Halo:  
