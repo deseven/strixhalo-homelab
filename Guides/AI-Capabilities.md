@@ -1,4 +1,4 @@
-# AI-Capabilities
+# AI Capabilities
 
 ### Intro
 It's pretty much as promised - there's a lot of memory, you can run a lot of stuff with it. Still, in my opinion, it doesn't make sense to allocate more than 64G to the gpu for these purposes, because even though you'll have enough memory to put big models into, the memory bandwidth would be a huge bottleneck, making most stuff unusable for realtime applications.
