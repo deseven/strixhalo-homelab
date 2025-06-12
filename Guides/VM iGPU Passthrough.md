@@ -13,6 +13,6 @@ This is mostly tied to Proxmox, but should still be applicable to regular system
  - [this issue](https://github.com/isc30/ryzen-gpu-passthrough-proxmox/issues/112) might be worth looking into
 
 ### Files
-(taken from [[Devices/GMKtec EVO-X2]], BIOS version 1.04)
+(taken from [[EVO-X2 | Devices/GMKtec EVO-X2]], BIOS version 1.04)
  - [vbios_8060s.bin](./vbios_8060s.bin)
  - [AMDGopDriver.rom](./AMDGopDriver.rom)
