@@ -10,6 +10,6 @@ https://github.com/isc30/ryzen-gpu-passthrough-proxmox
  - [this issue](https://github.com/isc30/ryzen-gpu-passthrough-proxmox/issues/112) might be worth looking into
 
 ### Files
-(taken from [GMKtec EVO-X2](/Devices/GMKtec%20EVO-X2) BIOS v.1.04)
- - vbios_8060s.bin
- - AMDGopDriver.rom
+(taken from [GMKtec EVO-X2](/Devices/GMKtec%20EVO-X2), BIOS version 1.04)
+ - [vbios_8060s.bin](./vbios_8060s.bin)
+ - [AMDGopDriver.rom](./AMDGopDriver.rom)
