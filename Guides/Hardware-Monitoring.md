@@ -10,5 +10,5 @@ I tried several different options, but the only thing that worked was [CoreFreq]
 
 If you need to access some individual values to be used elsewhere, `corefreq-cli` supports JSON output. For example, here's how you can get current CPU temprature and power limit:
 ```bash
-corefreq-cli -j | jq -c "{ cputemp: ([.Cpu[].FlipFlop[].Thermal.Temp] | add / length | round ), cpupower: (.Proc.State.Power[0] | round) }"
+corefreq-cli -j | jq -c "{cputemp: ([.Cpu[].FlipFlop[].Thermal.Temp] | add/length | round ), cpupower: (.Proc.State.Power[0] | round)}"
 ```
