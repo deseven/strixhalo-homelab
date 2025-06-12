@@ -10,7 +10,7 @@ https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
 ### Drivers & BIOS
 Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software).
 
-Since GMK is putting them on their Google Drive for no reason, here are the copies available for direct download:
+Since GMK are putting them on their Google Drive for no reason, here are the copies available for direct download:
  - [Windows 11 drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
  - [BIOS version 1.04](https://d7.wtf/s/EVO-X2-02_BIOS_SW1.04_20250514.zip)
 
