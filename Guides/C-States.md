@@ -17,7 +17,6 @@ Assuming that you already have it installed and working (otherwise check [[this 
 # /etc/modprobe.d/blacklist.conf
 k10temp
 acpi_cpufreq
-rapl
 ```
 
 ```bash
