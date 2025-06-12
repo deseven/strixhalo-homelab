@@ -1,6 +1,6 @@
 ## Strix Halo HomeLab
 
-![](./strix-halo.jpg)
+![Strix Halo APU](./strix-halo.jpg)
 
 **Welcome to the Strix Halo HomeLab wiki!**
 
