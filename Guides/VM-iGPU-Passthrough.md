@@ -45,6 +45,6 @@ hostpci1: 0000:c6:00.1,pcie=1,romfile=AMDGopDriver.rom
  - [this issue](https://github.com/isc30/ryzen-gpu-passthrough-proxmox/issues/112) might be worth looking into
 
 ### Files
-(taken from [[EVO-X2 | Devices/GMKtec-EVO-X2]], BIOS version 1.04)
+(taken from [[EVO-X2|Devices/GMKtec-EVO-X2]], BIOS version 1.04)
  - [vbios_8060s.bin](./vbios_8060s.bin)
  - [AMDGopDriver.rom](./AMDGopDriver.rom)
