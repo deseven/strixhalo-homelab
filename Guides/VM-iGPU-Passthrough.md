@@ -4,7 +4,7 @@
 This guide seems to work for Strix Halo:  
 https://github.com/isc30/ryzen-gpu-passthrough-proxmox
 
-This is mostly tied to Proxmox, but should still be applicable to regular systems with KVM installed.
+This is mostly tied to Proxmox, but should still be applicable to regular systems with QEMU installed.
 
 ### Configuration
 ```bash
