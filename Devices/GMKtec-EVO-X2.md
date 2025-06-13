@@ -6,6 +6,7 @@ https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
 ### Reviews
  - https://www.youtube.com/watch?v=UXjg6Iew9lg
  - https://www.youtube.com/watch?v=hPSMGpHQX6k
+ - https://www.youtube.com/watch?v=B7GDr-VFuEo
 
 ### Drivers & BIOS
 Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software).
