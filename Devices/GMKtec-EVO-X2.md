@@ -22,7 +22,7 @@ Still, in the performance mode (140W boost, 120W constant) the stock solution is
 More info here: https://www.reddit.com/r/GMKtec/comments/1l81j5b/upgrading_gmktec_evox2_cooling/
 
 ### Hardware
- - Disassembly video: https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/
+ - Disassembly video: https://www.youtube.com/watch?v=HMTy3jQc39A ([mirror](https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/))
  - Backside fan: 120x25 mm
  - Heatsink mount: 75x75 mm
  - RAM thermal pads thickness: 0.5 mm
