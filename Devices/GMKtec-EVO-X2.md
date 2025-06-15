@@ -14,6 +14,10 @@ Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec
 Since GMK are putting them on their Google Drive for no reason, here are the copies available for direct download:
  - [Windows 11 drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
  - [BIOS version 1.04](https://d7.wtf/s/EVO-X2-02_BIOS_SW1.04_20250514.zip)
+ - [EC version 1.04](https://d7.wtf/s/ITEFlash_WIN%20EC-AXB35-02-1.04-GMK.zip)
+
+### BIOS & EC upgrade
+All devices sent after the middle of May seem to have BIOS version of at least 1.04 (there are reports of a newer 1.05 version which is not publicly available yet), so you probably don't need to do anything. Otherwise the only officially supported way is using Windows. Something like [Hiren's BootCD](https://www.hirensbootcd.org) could be used as a more convenient option.
 
 ### Cooling
 EVO-X2 has a decent cooling system for its size and the used thermal interfaces are great as well, so changing thermal paste for example to even something like Noctua NT-H2 won't change much.
