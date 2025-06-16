@@ -16,3 +16,5 @@ My personal use case is the following:
 If you have something to say or want to participate, feel free to [contact me](https://d7.wtf/contact).
 
 \- deseven
+
+[![Join Strix Halo HomeLab Discord server](./join-us-discord.png)](https://discord.gg/pnPRyucNrG)
