@@ -13,7 +13,7 @@ My personal use case is the following:
  - Windows VM with iGPU passed through, for gaming and LLMs
  - Linux VMs for NAS and other services
 
-If you have something to say or want to participate, feel free to [contact me](https://d7.wtf/contact) directly or join the Discord server.
+If you have something to say, discuss or want to participate, feel free to [contact me](https://d7.wtf/contact) directly or join the Discord server.
 
 \- deseven
 
