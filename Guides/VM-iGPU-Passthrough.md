@@ -38,6 +38,9 @@ hostpci0: 0000:c6:00.0,pcie=1,romfile=vbios_8060s.bin,x-vga=1
 hostpci1: 0000:c6:00.1,pcie=1,romfile=AMDGopDriver.rom
 ```
 
+Proxmox VM:  
+![8060s GPU Passthrough in Proxmox](./proxmox-8060s-passthrough.png)
+
 ### Notes
  - hardware IDs are `1002:1586` (iGPU) and `1002:1640` (audio)
  - the 'reset bug' is here, I found no way to avoid it
