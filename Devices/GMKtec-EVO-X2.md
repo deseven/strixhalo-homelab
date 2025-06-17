@@ -14,7 +14,7 @@ Latest drivers are available [on the GMKtec website](https://www.gmktec.com/page
  - [User Manual](./EVO-X2_User_Manual.pdf)
 
 ### Firmware
-See [[Devices/GMKtec-EVO-X2/Firmware]]
+See [[Firmware|Devices/GMKtec-EVO-X2/Firmware]] page.
 
 ### Cooling
 EVO-X2 has a decent cooling system for its size and the used thermal interfaces are great as well, so changing thermal paste for example to even something like Noctua NT-H2 won't change much.
