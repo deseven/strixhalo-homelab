@@ -6,7 +6,7 @@ BIOS and EC firmware are available [on the GMKtec website](https://www.gmktec.co
 All devices sent after the middle of May seem to have BIOS version of at least 1.04. The only officially supported upgrade way is using Windows, follow the included instructions. Something like [Hiren's BootCD](https://www.hirensbootcd.org) could be used as a more convenient option. You're supposed to update EC firware first and BIOS the last.
 
 > [!WARNING]
-> The officially released versions are BIOS 1.04 and EC 1.04. The newer versions seem to be perfectly stable for me, but use at your own risk. 
+> The officially released versions are BIOS 1.04 and EC 1.04. The newer versions seem to be perfectly stable for me, but use them at your own risk. 
 
 ### BIOS
 
