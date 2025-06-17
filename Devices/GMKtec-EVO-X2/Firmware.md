@@ -5,6 +5,9 @@ BIOS and EC firmware are available [on the GMKtec website](https://www.gmktec.co
 ### BIOS & EC upgrade
 All devices sent after the middle of May seem to have BIOS version of at least 1.04. The only officially supported upgrade way is using Windows, follow the included instructions. Something like [Hiren's BootCD](https://www.hirensbootcd.org) could be used as a more convenient option. You're supposed to update EC firware first and BIOS the last.
 
+> [!WARNING]
+> The officially released versions are BIOS 1.04 and EC 1.04. The newer versions seem to be perfectly stable for me, but use at your own risk. 
+
 ### BIOS
 
 **1.05** [[AXB35-02_GMK_SW1.05_20250606.zip]](./AXB35-02_GMK_SW1.05_20250606.zip)
