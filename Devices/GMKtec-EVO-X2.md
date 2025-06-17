@@ -9,12 +9,11 @@ https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
  - [Alex Ziskind](https://www.youtube.com/watch?v=B7GDr-VFuEo)
 
 ### Drivers
-Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirror for direct download:
+Latest drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirror for direct download:
  - [Windows 11 drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
 
 ### Firmware
-Available on a separate page:
-[[Firmware|Devices/GMKtec-EVO-X2/Firmware]]
+See [[Devices/GMKtec-EVO-X2/Firmware]]
 
 ### Cooling
 EVO-X2 has a decent cooling system for its size and the used thermal interfaces are great as well, so changing thermal paste for example to even something like Noctua NT-H2 won't change much.
