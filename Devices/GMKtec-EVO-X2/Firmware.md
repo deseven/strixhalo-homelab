@@ -7,20 +7,19 @@ All devices sent after the middle of May seem to have BIOS version of at least 1
 
 ### BIOS
 
-**1.05**
+**1.05** [[AXB35-02_GMK_SW1.05_20250606.zip]](./AXB35-02_GMK_SW1.05_20250606.zip)
  - no official changelog available (yet?)
  - seems to have some more options
 
-**1.04**
+**1.04** [[AXB35-02_GMK_SW1.04_20250514.zip]](./AXB35-02_GMK_SW1.04_20250514.zip)
  - added virtualization support
  - added ability to set VRAM amount
  - added static fan control
 
-
 ### EC Firmware
 
-**1.06**
+**1.06** [[EC-AXB35-02-1.06.zip]](./EC-AXB35-02-1.06.zip)
  - no official changelog available
 
-**1.04**
+**1.04** [[EC-AXB35-02-1.04.zip]](./EC-AXB35-02-1.04.zip)
  - no official changelog available
