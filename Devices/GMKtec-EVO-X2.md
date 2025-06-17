@@ -8,22 +8,13 @@ https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
  - [ETA PRIME](https://www.youtube.com/watch?v=hPSMGpHQX6k)
  - [Alex Ziskind](https://www.youtube.com/watch?v=B7GDr-VFuEo)
 
-### Drivers & BIOS
-Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software).
-
-Since GMK are putting them on their Google Drive for no reason, here are the copies available for direct download:
+### Drivers
+Latest BIOS and drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirror for direct download:
  - [Windows 11 drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
- - [BIOS version 1.04](https://d7.wtf/s/EVO-X2-02_BIOS_SW1.04_20250514.zip)
- - [EC version 1.04](https://d7.wtf/s/ITEFlash_WIN%20EC-AXB35-02-1.04-GMK.zip)
 
->| # BIOS Changelog
->| **v. 1.04**
->| - added virtualization support
->| - added ability to set VRAM amount
->| - added static fan control
-
-### BIOS & EC upgrade
-All devices sent after the middle of May seem to have BIOS version of at least 1.04 (there are also reports of a newer 1.05 version which is not publicly available yet), so you probably don't need to do anything. Otherwise the only officially supported way is using Windows, follow the included instructions. Something like [Hiren's BootCD](https://www.hirensbootcd.org) could be used as a more convenient option.
+### Firmware
+Available on a separate page:
+[[Firmware|Devices/GMKtec-EVO-X2/Firmware]]
 
 ### Cooling
 EVO-X2 has a decent cooling system for its size and the used thermal interfaces are great as well, so changing thermal paste for example to even something like Noctua NT-H2 won't change much.
