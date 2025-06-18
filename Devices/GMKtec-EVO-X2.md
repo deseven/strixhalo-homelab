@@ -28,6 +28,7 @@ More info here: https://www.reddit.com/r/GMKtec/comments/1l81j5b/upgrading_gmkte
  - Backside fan: 120x25 mm
  - Heatsink mount: 75x75 mm
  - RAM thermal pads thickness: 0.5 mm
+ - Space for NVMe SSDs radiators: at least 73x24.2x10.5 mm (LWH)
 
 [![GMKtec EVO-X2](./gmktec-evo-x2.jpg?thumbnail)](./gmktec-evo-x2.jpg)
 [![GMKtec EVO-X2 board](./gmktec-evo-x2-board-photo.jpeg?thumbnail)](./gmktec-evo-x2-board-photo.jpeg)
