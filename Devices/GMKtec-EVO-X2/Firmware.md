@@ -1,7 +1,7 @@
 # GMKtec EVO-X2 Firmware
 
 ::: info
-If you happen to have BIOS or EC firware versions not presented on this page and would like to share, please [contact me directly](https://d7.wtf/contact) or [join our Discord](https://discord.gg/pnPRyucNrG)
+If you happen to have BIOS or EC firware versions not presented on this page and would like to share, please **[contact me directly](https://d7.wtf/contact)** or **[join our Discord](https://discord.gg/pnPRyucNrG)**
 :::
 
 BIOS and EC firmware are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software), but since they update it rarely and put them on Google Drive, you can download them here as well.
