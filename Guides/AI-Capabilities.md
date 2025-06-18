@@ -15,12 +15,13 @@ MoE models work very well, hopefully we'll see some 50-70B ones in the future, t
 
 Some real-life examples (KoboldCPP, Vulkan, full GPU offloading, [example config file](./gemma-3-27b.kcpps)):
 
-| Model             | Quantization | Prompt Processing | Generation Speed |
-| ----------------- | ------------ | ----------------- | ---------------- |
-| Llama 3.3 70B     | Q4_K_M       | 51.1 t/s          | 4.1 t/s          |
-| Gemma 3 27B       | Q5_K_M       | 94.4 t/s          | 6.2 t/s          | 
-| Qwen3 30B A3B     | Q5_K_M       | 94.5 t/s          | **27.8 t/s**     | 
-| GLM 4 9B          | Q5_K_M       | **273.7 t/s**     | 15.0 t/s         |
+| Model                 | Quantization | Prompt Processing | Generation Speed |
+| --------------------- | ------------ | ----------------- | ---------------- |
+| Llama 4 Scout 17B 16E | Q4_K_XL      | 106.0 t/s         | 12.7 t/s         |
+| Llama 3.3 70B         | Q4_K_M       | 51.1 t/s          | 4.1 t/s          |
+| Gemma 3 27B           | Q5_K_M       | 94.4 t/s          | 6.2 t/s          | 
+| Qwen3 30B A3B         | Q5_K_M       | 94.5 t/s          | **27.8 t/s**     | 
+| GLM 4 9B              | Q5_K_M       | **273.7 t/s**     | 15.0 t/s         |
 
 Much more info here: https://llm-tracker.info/_TOORG/Strix-Halo
 
