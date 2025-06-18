@@ -13,7 +13,7 @@ Context processing is very slow due to memory speed limitations, adding more tha
 
 MoE models work very well, hopefully we'll see some 50-70B ones in the future, they could be the real sweet spot for this hardware.
 
-Some real-life examples (KoboldCPP, Vulkan):
+Some real-life examples (KoboldCPP, Vulkan, [example config file](./gemma-3-27b.kcpps)):
 
 | Model             | Quantization | Prompt Processing | Generation Speed |
 | ----------------- | ------------ | ----------------- | ---------------- |
