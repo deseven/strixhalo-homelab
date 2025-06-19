@@ -45,7 +45,8 @@ Proxmox VM (ignore vbios name):
 
 ### Notes
  - hardware IDs are `1002:1586` (iGPU) and `1002:1640` (audio)
- - the 'reset bug' is here, I found no way to avoid it
+ - Windows works fine, but I haven't managed to do it with a Linux VM, amdgpu driver crashes
+ - the 'reset bug' is here, I found no way to avoid it, so **you can passthrough the iGPU only once per boot of the host**
  - if your VM crashes during GPU driver install, switch the CPU type to something generic, install the driver, then return it back to `host`
  - set the fixed VRAM amount in the BIOS and never change it on the OS level, otherwise expect major slowdowns and crashes
  - [this issue](https://github.com/isc30/ryzen-gpu-passthrough-proxmox/issues/112) might be worth looking into
