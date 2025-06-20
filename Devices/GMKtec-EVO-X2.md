@@ -25,6 +25,7 @@ More info here: https://www.reddit.com/r/GMKtec/comments/1l81j5b/upgrading_gmkte
 
 ### Hardware
  - Board: Sixunited AXB35-02
+ - EC: ITE IT5570E-128
  - Backside fan: 120x25 mm
  - Heatsink mount: 75x75 mm
  - RAM thermal pads thickness: 0.5 mm
