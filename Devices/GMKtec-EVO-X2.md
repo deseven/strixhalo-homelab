@@ -9,9 +9,11 @@ https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc
  - [Alex Ziskind](https://www.youtube.com/watch?v=B7GDr-VFuEo)
 
 ### Drivers & User Manual
-Latest drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirrors for direct download:
+Latest Windows drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirrors for direct download:
  - [Windows 11 Drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
  - [User Manual](./EVO-X2_User_Manual.pdf)
+
+You can also download AMD drivers directly from AMD, there is no vendor lock.
 
 ### Firmware
 See [[Firmware|Devices/GMKtec-EVO-X2/Firmware]] page.
