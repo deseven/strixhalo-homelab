@@ -5,7 +5,7 @@
 https://www.hp.com/us-en/workstations/z2-mini-a.html
 
 ### Thoughts
- - seems to be available already, but the pricing is insane, $4500+ for a 128G version (could be bought much cheaper in the UK for some reason)
+ - Is available already. The pricing varies dramatically: resellers in UK and Germany sell the 128G version for under $ 3600 USD
  - the cooling solution looks very similar to the Sixunited's one, but has a beefier heatsink
  - supposedly the CPU can do short burst up to 160W, 120W is still the maximum for sustained load
  - ECC memory is an option (not default)
