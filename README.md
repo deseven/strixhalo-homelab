@@ -6,12 +6,16 @@ The purpose of this website it to gather important information and practical gui
 
 **Common use cases include:**
 - LLM development and inference systems
+- Image & Video generation
 - High-performance workstations
 - Virtualization hosts running multiple VMs
 - Gaming systems
 - Home servers and NAS solutions
 
 Whether you're researching systems to purchase (by the way, we have [[a guide|Guides/Buyer's_Guide]] for that too!), setting up your first Strix Halo PC or troubleshooting issues, this wiki aims to provide the information you need.
+
+Make sure to also check [the Strix Halo Toolboxes project](https://strix-halo-toolboxes.com): probably the easiest way to integrate AI capabilities into Strix Halo without sacrificing performance.
+
 
 Hope it helps :)
 
