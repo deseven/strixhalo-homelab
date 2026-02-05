@@ -24,6 +24,23 @@ It allows you to:
 6. Run `scripts/test_fan_mode_fixed.sh`, it should test your fans on all 6 fixed levels.
 7. If everything is good, you can make the module automatically load on system boot with `sudo echo ec_su_axb35 >> /etc/modules`. If it says "permission denied", drop into root console with `su` or `sudo su -` and try again.
 
+The equivalent of the above steps for Fedora is:
+```shell
+# Install module building dependencies
+sudo dnf group install -y development-tools c-development
+sudo dnf install -y kernel-headers
+
+# Clone the repo
+git clone https://github.com/cmetz/ec-su_axb35-linux.git /tmp/ec-su_axb35-linux
+cd /tmp/ec-su_axb35-linux
+sudo make install
+
+sudo modprobe ec_su_axb35
+echo 'ec_su_axb35' | sudo tee /etc/modules-load.d/ec_su_axb35.conf >/dev/null
+
+dmesg | grep 'Sixunited AXB35-02 EC driver loaded'
+```
+
 #### Installation with secure boot on Fedora
 Check that secure boot is enabled:
 ```
