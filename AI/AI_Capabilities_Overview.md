@@ -72,9 +72,7 @@ Lemonade, TheRock (and tbt, most standard AI/ML workflows) standardize on using 
 
 ### Docker Images
 There are a lot of Docker images available that may also be useful:
-- https://github.com/kyuz0/amd-strix-halo-toolboxes - very thorough documentation for getting llama.cpp inferencing up w/ Vulkan an ROCm backends
-- https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes - getting vLLM up and running
-- https://github.com/kyuz0/amd-strix-halo-image-video-toolboxes - to get Qwen Image and WAN running
+- https://strix-halo-toolboxes.com - probably the easiest way to set things up w/ Vulkan an ROCm backends, including text, image and video generation with llama.cpp, vLLM and ComfyUI
 - https://github.com/shantur/strix-rocm-all - clear setup scripts for getting Unsloth installed
 
 ### Memory Limits
@@ -165,7 +163,7 @@ For more on how to test llama.cpp performance:
 ## Image/Video Generation
 For Windows you can give AMUSE a try. It's probably the easiest way to get started quickly: https://www.amuse-ai.com/
 
-On Linux, using kyuz0's [AMD Strix Halo — Image & Video Toolbox](https://github.com/kyuz0/amd-strix-halo-image-video-toolboxes) is probably the easiest way to get up and running.
+On Linux, using kyuz0's [AMD Strix Halo — ComfyUI Toolbox](https://github.com/kyuz0/amd-strix-halo-comfyui-toolboxes) is probably the easiest way to get up and running.
 
 Here are some instructions for getting ComfyUI up and running on Windows: https://www.reddit.com/r/StableDiffusion/comments/1lmt44b/running_rocmaccelerated_comfyui_on_strix_halo_rx/
 
