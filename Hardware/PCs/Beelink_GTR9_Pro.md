@@ -12,9 +12,9 @@ Availability: available since September 2025.
 >
 > Version 1 of the board has **MAJOR** stability issues with no possible software fix. Read more [here](https://craigwilson.blog/post/2025/2025-09-25-beelink395bsod/) and [here](https://bbs.bee-link.com/d/7762-gtr-9-pro-ethernet-malfunction-under-load).
 >
-> The issue appears to be resolved in board v2.2, which replaces the faulty Intel NICs with Realtek ones. When purchasing a PC, there is currently no way to determine which board version it contains. Beelink officially offers replacements for v1 boards or complete PCs.
+> The issue appears to be resolved in board v2.2, which replaces the faulty Intel NICs with Realtek ones. When purchasing a PC, there is currently no obvious way to determine which board version it contains. Confirm with the seller what board version the PC has or which NICs it uses.
 >
-> A guide for replacing a v1 board with v2.2 is available [here](https://tetramatrix.github.io/startmenu/gtr9pro/).
+> Beelink officially offers replacements for v1 boards or complete PCs. A guide for replacing a v1 board with v2.2 is available [here](https://tetramatrix.github.io/startmenu/gtr9pro/).
 
 ### Linux on the Beelink GTR9 Pro
 
