@@ -52,7 +52,7 @@ Based on the survey data, **[[GMKtec EVO-X2|Hardware/PCs/GMKtec_EVO-X2]]** and *
 
 **[[Corsair AI Workstation 300|Hardware/PCs/Corsair_AI_Workstation_300]]** is also a decent one. It's a stock Sixunited's PC, but brand reputation likely force them to have a better quality control and support. 
 
-**[[Beelink GTR9Pro|Hardware/PCs/Beelink_GTR9_Pro]]** is a very interesting system in Mac Mini style which is unfortunately plagued by major stability problems which no one was able to solve for over 3 months already. **Avoid unless something changes on that front.**
+**[[Beelink GTR9Pro|Hardware/PCs/Beelink_GTR9_Pro]]** is an interesting Mac Mini-style system that suffered from significant stability issues unresolved for several months. Beelink eventually released an updated hardware revision and offered replacements. **Avoid unless you can confirm the motherboard is version 2.2 or later, or features Realtek NICs.**
 
 **[[Minisforum MS-S1 MAX|Hardware/PCs/Minisforum_MS-S1_MAX]]** seems decent and also has a PCIe slot for expandability, along with two 10G Ethernets. Early feedback suggests good build quality and premium feel, however some people report problems with the network interfaces on Linux and sub-optimal fan curves, both problems could likely be fixed in software later.
 
