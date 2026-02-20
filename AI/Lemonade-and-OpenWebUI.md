@@ -10,18 +10,7 @@ Rather than relying on a single monolithic engine, **[Lemonade](https://github.c
 ## Strix Halo Optimization
 Lemonade is particularly potent for Strix Halo APUs as it exposes specific recipes to target the specialized hardware blocks available on Strix Halos.
 
-| Modality | Recipe | Backend | Device | OS |
-| :--- | :--- | :--- | :--- | :--- |
-| **LLM** | `llamacpp` | `vulkan` | GPU | Windows, Linux |
-| | | `rocm` | Select AMD GPUs* | Windows, Linux |
-| | | `cpu` | x86_64 | Windows, Linux |
-| | `flm` | `npu` | XDNA2 NPU | Windows |
-| | `ryzenai-llm` | `npu` | XDNA2 NPU | Windows |
-| **Speech-to-text** | `whispercpp` | `npu` | XDNA2 NPU | Windows |
-| | | `cpu` | x86_64 | Windows |
-| **Text-to-speech** | `kokoro` | `cpu` | x86_64 | Windows, Linux |
-| **Image generation** | `sd-cpp` | `rocm` | Selected AMD GPUs | Windows, Linux |
-| | | `cpu` | x86_64 CPU | Windows, Linux |
+Lemonade's supported configurations are available [here](https://github.com/lemonade-sdk/lemonade?tab=readme-ov-file#supported-configurations).
 
 ## Integration Features
 *   **Unified API Surface:** Lemonade exposes these diverse backends via standard **OpenAI** and **Ollama** compatible endpoints on a single port.
