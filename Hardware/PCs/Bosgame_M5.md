@@ -8,7 +8,7 @@ Yet another mini PC based on the [[Sixunited's AXB35 board|Hardware/Boards/Sixun
 
 Availability: since July 2025.
 
-Price: $2099 / 1770€ for the 128GB version, $1589 / 1340€ for the 96GB RAM version. In the EU, VAT is included in the price. The PC comes with Windows 11 Pro preinstalled on the 2TB SSD.
+Price: $2199 / 1865€ for the 128GB version, $1589 / 1340€ for the 96GB RAM version. In the EU, VAT is included in the price. The PC comes with Windows 11 Pro preinstalled on the 2TB SSD.
 
 As of October 2025, EU orders are shipped from Germany and US orders are shipped from the US. All other orders are shipped from China.
 
