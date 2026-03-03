@@ -60,7 +60,6 @@ Based on the survey data, **[[GMKtec EVO-X2|Hardware/PCs/GMKtec_EVO-X2]]** and *
 
 **[[Framework Desktop|Hardware/PCs/Framework_Desktop]]** is the crown jewel of them all - pretty good in all possible measurements, except for size. It can be recommended as a guaranteed plug-and-play device with decent support and a huge community. However, it's also a bit pricey and availability sucks. Some users experienced longer wait times (over a month), and there were occasional PSU fan noise issues.
 
-You can also check out [the spreadsheet that aims to compare all possible options](https://docs.google.com/spreadsheets/d/1QOvILBE7BZHICVWJ1ylmlO3jIMig1HYW6gIeZ1jhQXE/edit?gid=0#gid=0) (could be a bit outdated).
 
 ## Size and Noise
 
