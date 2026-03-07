@@ -2,7 +2,7 @@
 
 ## Clustering with Oculink and PCIe 3.0 Infiniband cards
 
-The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GByte/s. Not too shabby.
+The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
 
 Here's some hardware used for a setup with cheap used Mellanox cards:
 
@@ -48,7 +48,8 @@ Install needed packages on both PCs running Fedora 43:
 $ ibv_devinfo
 ```
 look for „Link Layer“, it should show Infiniband
-on PC1 we start opensm, the Infiniband subnet manager and administration:
+
+On PC1 we start **opensm**, the Infiniband subnet manager and administration:
 ```$ sudo dnf install opensm
 $ sudo systemctl enable --now opensm
 $ sudo restorecon -v /var/log/opensm.log
@@ -98,19 +99,22 @@ ib-conn                      5eaa86fe-99e7-48c9-b460-740d31adc936  infiniband  i
 thunderbolt0                 bd7e1a3c-f05d-3a43-bfc0-880fb874dba4  ethernet    thunderbolt0 
 ```
 Check with „ip a“ if the infiniband interfaces are up. If not, check on PC1 if opensm is giving errors?
+
 OK, if the connection is up, we can check the bandwidth:
-on PC1:
+
+On PC1:
 ```$ ib_write_bw
 ```
-on PC2:
+On PC2:
 ```$ ib_write_bw 192.168.100.1 #bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]
  65536      5000             3293.63            3293.56             0.052697
 ```
 and we can check the latency:
-on PC1:
+
+On PC1:
 ```$ ib_write_lat
 ```
-on PC2:
+On PC2:
 ```$ ib_write_lat 192.168.100.1
  #bytes #iterations    t_min[usec]    t_max[usec]  t_typical[usec]    t_avg[usec]    t_stdev[usec]   99% percentile[usec]   99.9% percentile[usec] 
  2       1000          1.10           2.05         1.11     	       1.12        	0.00   		1.19    		2.05   
