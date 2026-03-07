@@ -1,4 +1,4 @@
-# Clustering with RDMA
+# Hardware for clustering with RDMA
 
 ## Clustering with Oculink and PCIe 3.0 Infiniband cards
 
