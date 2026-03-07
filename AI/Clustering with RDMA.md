@@ -1,0 +1,122 @@
+# Clustering with RDMA
+
+## Clustering with Oculink and PCIe 3.0 Infiniband cards
+
+The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GByte/s. Not too shabby.
+
+Here's some hardware used for a setup with cheap used Mellanox cards:
+
+* 2x Strix Halo with a spare M.2 slot (tested using Bosgame M5)
+* 1x ATX PC PSU (any will do, needs just 20 Watts)
+* 2x Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each [example link](https://www.ebay.de/itm/177760210929?_skw=cx354a&epid=7043214331&itmmeta=01KK55RMHKERWWE085D2FZ4C5G&hash=item2963558ff1:g:u1MAAeSw7MRpYSrx)
+* 1x DAC cable Mellanox 56G QSFP+ FDR InfiniBand DAC Copper Twinax Passiv 0.5m MC2207130-00A, used, 18€ [example link](https://www.ebay.de/itm/126922287689)
+* 1x ATX PSU 24pin splitter cable [example link](https://a.aliexpress.com/_Ezm7My8) ($6 with coins)
+* 2x Oculink M.2 adapter, capble, PCIe 4.0 x16 slot [example link](https://a.aliexpress.com/_Ez9CgPK) (~$25 each with coins and coupons)
+ 
+Total cost: 46€+18€+49€ =113€ Not bad!
+
+What else is needed:
+
+* a little 3d printed custom case for the two network cards
+* 2x 3d printed covers for the SSD compartment with a hole for the Oculink cable. Or you drill a whole in the original metal covers.
+* a little fan to keep the Mellanox cards cool inside the case (they use up to 10W each)
+
+### Quick howto:
+
+1. Connect Oculink M.2 adapters to the empty M.2 NVMe slots (1 per PC).
+2. Plug Oculink cables into M.2 adapters and into PCIe 4.0 x16 slot adapters.
+3. Plug 24pin PSU split cable into both PCIe 4.0 x16 slot adapters and into PSU.
+4. Plug the two Mellanox cards into the PCIe slots
+5. Connect the two Mellanox cards with the DAC cable
+6. Using the switch on the PCIe 4.0 x16 slot adapter, turn on the PSU.
+7. Finally, turn on the PCs.
+
+Check if you can see the Mellanox cards in `lspci`:
+
+```$ lspci
+…
+c3:00.0 Network controller: Mellanox Technologies MT27500 Family [ConnectX-3]
+…
+```
+Make sure the NIC is connected via PCIe 3.0 x4:
+```$ sudo lspci -vv -s c3:00.0 |grep -E "LnkCap:|LnkSta:"
+		LnkCap:	Port #8, Speed 8GT/s, Width x8, ASPM L0s, Exit Latency L0s unlimited
+		LnkSta:	Speed 8GT/s, Width x4 (downgraded)
+```
+Install needed packages on both PCs running Fedora 43:
+```$ sudo dnf install rdma-core libibverbs-utils mstflint infiniband-diags perftest
+$ ibv_devinfo
+```
+look for „Link Layer“, it should show Infiniband
+on PC1 we start opensm, the Infiniband subnet manager and administration:
+```$ sudo dnf install opensm
+$ sudo systemctl enable --now opensm
+$ sudo restorecon -v /var/log/opensm.log
+
+$ ibstat
+```
+now shows „State: Active“ on both PCs
+
+PC1:
+```$ ip a|grep -B 1 infini
+4: ibp195s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 2044 qdisc fq_codel state UP group default qlen 1000
+    link/infiniband 80:00:02:08:fe:80:00:00:00:00:00:00:ec:0d:9a:03:00:xx:xx:xx brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+5: ibp195s0d1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4092 qdisc fq_codel state DOWN group default qlen 1000
+    link/infiniband 80:00:02:09:fe:80:00:00:00:00:00:00:ec:0d:9a:03:00:xx:xx:xx brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+```
+PC2:
+```$ ip a|grep -B 1 infini
+3: ibp195s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 2044 qdisc fq_codel state UP group default qlen 1000
+    link/infiniband 80:00:02:08:fe:80:00:00:00:00:00:00:ec:0d:9a:03:00:yy:yy:yy brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+4: ibp195s0d1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4092 qdisc fq_codel state DOWN group default qlen 1000
+    link/infiniband 80:00:02:09:fe:80:00:00:00:00:00:00:ec:0d:9a:03:00:yy:yy:yy brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+```
+So the interface name is **ibp195s0** on both PCs.
+
+configure IPv4 on PC1:
+```$ sudo nmcli conn add type infiniband con-name ib-conn ifname ibp195s0 transport-mode datagram ipv4.method manual ipv4.addresses 192.168.100.1/24
+Verbindung »ib-conn« (e6655fba-ebd6-4ee5-a31b-9c25faacfe37) erfolgreich hinzugefügt.
+```
+configure IPv4 on PC2:
+```$ sudo nmcli conn add type infiniband con-name ib-conn ifname ibp195s0 transport-mode datagram ipv4.method manual ipv4.addresses 192.168.100.2/24
+$ sudo nmcli conn up ib-conn
+$ sudo nmcli conn show
+```
+PC1: (I also have a connection via Thunderbolt)
+```$ sudo nmcli conn up ib-conn
+$ sudo nmcli conn show
+NAME                         UUID                                  TYPE        DEVICE       
+Kabelgebundene Verbindung 1  1a44c330-8d06-34d6-9773-df0a34882a4b  ethernet    eno1         
+ib-conn                      e6655fba-ebd6-4ee5-a31b-9c25faacfe37  infiniband  ibp195s0     
+thunderbolt0                 7beaa789-b367-4810-ba22-3e946edab0fd  ethernet    thunderbolt0 
+```
+PC2:
+```$ sudo nmcli conn show
+NAME                         UUID                                  TYPE        DEVICE       
+Kabelgebundene Verbindung 1  dea9361f-0f51-3acf-9b85-04a35c116b67  ethernet    eno1         
+ib-conn                      5eaa86fe-99e7-48c9-b460-740d31adc936  infiniband  ibp195s0     
+thunderbolt0                 bd7e1a3c-f05d-3a43-bfc0-880fb874dba4  ethernet    thunderbolt0 
+```
+Check with „ip a“ if the infiniband interfaces are up. If not, check on PC1 if opensm is giving errors?
+OK, if the connection is up, we can check the bandwidth:
+on PC1:
+```$ ib_write_bw
+```
+on PC2:
+```$ ib_write_bw 192.168.100.1 #bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]
+ 65536      5000             3293.63            3293.56             0.052697
+```
+and we can check the latency:
+on PC1:
+```$ ib_write_lat
+```
+on PC2:
+```$ ib_write_lat 192.168.100.1
+ #bytes #iterations    t_min[usec]    t_max[usec]  t_typical[usec]    t_avg[usec]    t_stdev[usec]   99% percentile[usec]   99.9% percentile[usec] 
+ 2       1000          1.10           2.05         1.11     	       1.12        	0.00   		1.19    		2.05   
+```
+So around 1.12µs which is an expected value.
+
+Next, follow the [AMD Strix Halo RDMA Cluster Setup Guide](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md)
+
+To be continued, it's still work in progress.
