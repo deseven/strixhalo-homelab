@@ -1,10 +1,12 @@
-# Hardware for clustering with RDMA
+# Clustering with RDMA
+
+With RDMA and low latencies like 1µs, tensor parallelism can provide a speedup. 
+Unfortunately, it's not yet possible using the USB4/Thunderbolt 3 ports of the Strix Halo.
+So we need some extra hardware: Network adapters that are able to offload the CPU for this task, connected via PCIe.
 
 ## Clustering with Oculink and PCIe 3.0 Infiniband cards
 
-The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
-
-Here's some hardware used for a setup with cheap used Mellanox cards:
+The two Bosgame M5 PCs used for this setup have neither an Oculink port nor a PCIe slot. So we use M.2 to Oculink adapters to get PCIe 4.0 x4 for the NICs. Here's some hardware used for a setup with cheap used Mellanox cards. The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
 
 * 2x Strix Halo with a spare M.2 slot (tested using Bosgame M5)
 * 1x ATX PC PSU (any will do, needs just 20 Watts)
