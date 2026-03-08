@@ -20,7 +20,7 @@ Total cost: 46€+18€+49€ =113€ Not bad!
 What else is needed:
 
 * a little 3d printed custom case for the two network cards
-* 2x 3d printed covers for the SSD compartment with a hole for the Oculink cable. Or you drill a whole in the original metal covers.
+* 2x 3d printed lids for the SSD compartment with a hole for the Oculink cable. Or you drill a hole in the original metal lids.
 * a little fan to keep the Mellanox cards cool inside the case (they use up to 10W each)
 
 ### Quick howto:
