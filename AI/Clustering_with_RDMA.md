@@ -108,7 +108,8 @@ On PC1:
 ```$ ib_write_bw
 ```
 On PC2:
-```$ ib_write_bw 192.168.100.1 #bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]
+```$ ib_write_bw 192.168.100.1
+#bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]
  65536      5000             3293.63            3293.56             0.052697
 ```
 and we can check the latency:
@@ -121,7 +122,7 @@ On PC2:
  #bytes #iterations    t_min[usec]    t_max[usec]  t_typical[usec]    t_avg[usec]    t_stdev[usec]   99% percentile[usec]   99.9% percentile[usec] 
  2       1000          1.10           2.05         1.11     	       1.12        	0.00   		1.19    		2.05   
 ```
-So around 1.12µs which is an expected value.
+So around 1.12µs which is an expected value. Great!
 
 Next, follow the [AMD Strix Halo RDMA Cluster Setup Guide](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md)
 
