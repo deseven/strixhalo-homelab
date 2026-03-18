@@ -1,10 +1,8 @@
 # Kubernetes
+Running Kubernetes on a Strix Halo machine allows you to build a powerful node for local AI inference. Because standard Kubernetes GPU operators are designed for discrete PCIe cards, Strix Halo requires a few platform-specific tweaks to enable reliable GPU scheduling and monitoring.
 
-Running Kubernetes on a Strix Halo machine allows you to build a powerful, cloud-native node for local AI inference. However, because standard Kubernetes GPU operators are designed for discrete PCIe cards, getting the Strix Halo iGPU properly recognized by your cluster requires specific kernel arguments and custom hardware discovery rules.
+This guide shows how to configure a Strix Halo system with Talos Linux, the ROCm GPU Operator, and custom Node Feature Discovery rules so Kubernetes workloads can access the iGPU cleanly.
 
-This guide walks you through configuring a Strix Halo machine for a Kubernetes environment using Talos Linux.
-
-What You Will Achieve
 By the end of this guide, you will have configured:
 
 - Optimized Node Provisioning: A Talos Linux installation with the required AMD drivers and memory allocation kernel arguments.
