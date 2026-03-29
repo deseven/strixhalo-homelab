@@ -7,6 +7,8 @@ One of the first Strix Halo boards, used in many Chinese PCs along with a coolin
  - [[FEVM FA-EX9|Hardware/PCs/FEVM_FA-EX9]] (V22 & V30)
  - [[NIMO AI MiniPC|Hardware/PCs/NIMO_AI_MiniPC]]
 
+There's also at least one custom case available for printing: https://makerworld.com/en/models/2448273-bosgame-m5-silent-pc-case-80mm-fans
+
 ### Power
 The board supports 3 different power limits - 55W (100W burst), 85W (120W burst), and 120W (140W burst):
 ![AXB35 Power Modes](./axb35-power-modes.png)
@@ -28,7 +30,7 @@ For fan and power mode control on Windows and Linux check out [[this guide|Guide
 ### Facts
  - RAM modules: [MT62F4G32D8DV-023](https://www.micron.com/products/memory/dram-components/lpddr5x/part-catalog/part-detail/mt62f4g32d8dv-023-wt-c)
  - EC: ITE IT5570E-128
- - Heatsink mount: 75x75 mm
+ - Heatsink mount: 75x75 mm (LGA 1700)
  - RAM thermal pads thickness: 0.5 mm
  - Power input: 19.5V, 5.5x2.5mm barrel jack, center positive
 
