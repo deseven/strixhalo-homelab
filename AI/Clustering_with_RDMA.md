@@ -9,13 +9,13 @@ So we need some extra hardware: Network adapters that are able to offload the CP
 The two Bosgame M5 PCs used for this setup have neither an Oculink port nor a PCIe slot. So we use M.2 to Oculink adapters to get PCIe 4.0 x4 for the NICs. Here's some hardware used for a setup with cheap used Mellanox cards. The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
 
 * 2x Strix Halo with a spare M.2 slot (tested using Bosgame M5)
-* 1x ATX PC PSU (any will do, needs just 20 Watts)
-* 2x Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each [example link](https://www.ebay.de/itm/177760210929?_skw=cx354a&epid=7043214331&itmmeta=01KK55RMHKERWWE085D2FZ4C5G&hash=item2963558ff1:g:u1MAAeSw7MRpYSrx)
+* 1x ATX PC PSU (any will do, needs just 20 Watts). I'm using a PicoPSU (20€).
+* 2x Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each.
 * 1x DAC cable Mellanox 56G QSFP+ FDR InfiniBand DAC Copper Twinax Passiv 0.5m MC2207130-00A, used, 18€ [example link](https://www.ebay.de/itm/126922287689)
 * 1x ATX PSU 24pin splitter cable [example link](https://a.aliexpress.com/_Ezm7My8) ($6 with coins)
-* 2x Oculink M.2 adapter, capble, PCIe 4.0 x16 slot [example link](https://a.aliexpress.com/_Ez9CgPK) (~$25 each with coins and coupons)
+* 2x Oculink M.2 adapter, cable, PCIe 4.0 x16 slot [example link](https://a.aliexpress.com/_Ez9CgPK) (~$25 each with coins and coupons)
  
-Total cost: 46€+18€+49€ =113€ Not bad!
+Total cost: 20€+46€+18€+49€ = 133€ Not bad!
 
 What else is needed:
 
@@ -45,11 +45,33 @@ Make sure the NIC is connected via PCIe 3.0 x4:
 		LnkCap:	Port #8, Speed 8GT/s, Width x8, ASPM L0s, Exit Latency L0s unlimited
 		LnkSta:	Speed 8GT/s, Width x4 (downgraded)
 ```
+It should also appear in your dmesg, like this:
+```$ sudo dmesg |grep mlx4
+[    2.762576] mlx4_core: Mellanox ConnectX core driver v4.0-0
+[    2.762587] mlx4_core: Initializing 0000:c3:00.0
+[    2.762633] mlx4_core 0000:c3:00.0: enabling device (0000 -> 0002)
+[    9.162204] mlx4_core 0000:c3:00.0: DMFS high rate steer mode is: disabled performance optimized steering
+[    9.162913] mlx4_core 0000:c3:00.0: 31.504 Gb/s available PCIe bandwidth, limited by 8.0 GT/s PCIe x4 link at 0000:00:02.5 (capable of 63.008 Gb/s with 8.0 GT/s PCIe x8 link)
+[    9.402996] <mlx4_ib> mlx4_ib_probe: mlx4_ib: Mellanox ConnectX InfiniBand driver v4.0-0
+[    9.404284] <mlx4_ib> mlx4_ib_probe: counter index 0 for port 1 allocated 0
+[    9.404286] <mlx4_ib> mlx4_ib_probe: counter index 1 for port 2 allocated 0
+[   10.781441] mlx4_core 0000:c3:00.0 ibp195s0: renamed from ib0
+[   10.781830] mlx4_core 0000:c3:00.0 ibp195s0d1: renamed from ib1
+[   12.486493] mlx4_core 0000:c3:00.0 ibp195s0d1: "NetworkManager" wants to know my dev_id. Should it look at dev_port instead? See Documentation/ABI/testing/sysfs-class-net for more info.
+[ 1943.886040] mlx4_core 0000:c3:00.0 ibp195s0: Port: 1 Link INIT
+[ 1943.941515] mlx4_core 0000:c3:00.0 ibp195s0: Port: 1 Link ACTIVE
+```
+To enable performance optimized steering (and surrender VLAN support), edit 
+`/etc/modprobe.d/mlx4.conf` and add this line:
+```options mlx4_core log_num_mgm_entry_size=-7
+```
+as mentioned in the [driver documentation](https://doc.dpdk.org/guides/nics/mlx4.html).
+
 Install needed packages on both PCs running Fedora 43:
 ```$ sudo dnf install rdma-core libibverbs-utils mstflint infiniband-diags perftest
 $ ibv_devinfo
 ```
-look for „Link Layer“, it should show Infiniband
+look for "Link Layer", it should show Infiniband
 
 On PC1 we start **opensm**, the Infiniband subnet manager and administration:
 ```$ sudo dnf install opensm
