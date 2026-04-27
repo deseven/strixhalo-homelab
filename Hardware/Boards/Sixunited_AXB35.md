@@ -28,11 +28,14 @@ A guide for applying it on EVO-X2 is available [[here|Guides/Sixunited_AXB35/Rep
 For fan and power mode control on Windows and Linux check out [[this guide|Guides/Sixunited_AXB35/Power_Mode_and_Fan_Control]].
 
 ### Facts
- - RAM modules: [MT62F4G32D8DV-023](https://www.micron.com/products/memory/dram-components/lpddr5x/part-catalog/part-detail/mt62f4g32d8dv-023-wt-c)
- - EC: ITE IT5570E-128
- - Heatsink mount: 75x75 mm (LGA 1700)
- - RAM thermal pads thickness: 0.5 mm
- - Power input: 19.5V, 5.5x2.5mm barrel jack, center positive
+- RAM modules: [MT62F4G32D8DV-023](https://www.micron.com/products/memory/dram-components/lpddr5x/part-catalog/part-detail/mt62f4g32d8dv-023-wt-c)
+- EC: ITE IT5570E-128
+- PCB dimensions: 180x180x1.7 mm
+- Heatsink mount: 75x75 mm (LGA 1700)
+- Spacing between front/back screws: 165 mm
+- Spacing between left/right screws: 170 mm
+- RAM thermal pads thickness: 0.5 mm
+- Power input: 19.5V, 5.5x2.5mm barrel jack, center positive
 
 ### Firmware
 See [[Firmware|Hardware/Boards/Sixunited_AXB35/Firmware]] page.
