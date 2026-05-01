@@ -94,7 +94,7 @@ Let's look on the average increase between different modes for each category:
 | Category                 | 55W -> 85W | 85W -> 120W | 55W -> 120W |
 | ------------------------ | ---------- | ----------- | ----------- |
 | CPU - PassMark           | <span style="color: #1fea00;">+19.0%</span> | <span style="color: #1fea00;">+11.8%</span> | <span style="color: #1fea00;">+30.8%</span> |
-| CPU - Various Benchmarks | <span style="color: #1fea00;">+17.0%</span> | <span style="color: #1fea00;">+8.5%</span> | <span style="color: #1fea00;">+25.5%</span>
+| CPU - Various Benchmarks | <span style="color: #1fea00;">+17.0%</span> | <span style="color: #1fea00;">+8.5%</span> | <span style="color: #1fea00;">+25.5%</span> |
 | GPU - Various Benchmarks | <span style="color: #1fea00;">+13.3%</span> | <span style="color: #1fea00;">+11.7%</span> | <span style="color: #1fea00;">+25.0%</span> |
 | GPU - Gaming             | <span style="color: #1fea00;">+12.3%</span> | <span style="color: #1fea00;">+9.3%</span> | <span style="color: #1fea00;">+21.6%</span> |
 | GPU - LLM                | <span style="color: #1fea00;">+8.7%</span> | <span style="color: #1fea00;">+2.0%</span> | <span style="color: #1fea00;">+10.7%</span> |
