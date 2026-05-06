@@ -61,11 +61,12 @@ It should also appear in your dmesg, like this:
 [ 1943.886040] mlx4_core 0000:c3:00.0 ibp195s0: Port: 1 Link INIT
 [ 1943.941515] mlx4_core 0000:c3:00.0 ibp195s0: Port: 1 Link ACTIVE
 ```
+<!-- this is problematic 
 To enable performance optimized steering (and surrender VLAN support), edit 
 `/etc/modprobe.d/mlx4.conf` and add this line:
 ```options mlx4_core log_num_mgm_entry_size=-7
 ```
-as mentioned in the [driver documentation](https://doc.dpdk.org/guides/nics/mlx4.html).
+as mentioned in the [driver documentation](https://doc.dpdk.org/guides/nics/mlx4.html). -->
 
 Install needed packages on both PCs running Fedora 43:
 ```$ sudo dnf install rdma-core libibverbs-utils mstflint infiniband-diags perftest
