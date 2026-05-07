@@ -1,6 +1,6 @@
 # Sixunited AXB35-02
 
-![Sixunited AXB35-02](Sixunited_AXB35-02/Sixunited_AXB35-02.jpg)
+![Sixunited AXB35-02](./sixunited_axb35-02.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.sixunited.com/)] - Unavailable
 

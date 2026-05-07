@@ -1,6 +1,6 @@
 # Aoostar NEX395
 
-![Aoostar NEX395](Aoostar_NEX395/aoostar-nex395.jpg)
+![Aoostar NEX395](./aoostar-nex395.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://aoostar.com/)] - Unavailable
 

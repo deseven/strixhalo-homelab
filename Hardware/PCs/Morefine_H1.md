@@ -1,6 +1,6 @@
 # MOREFINE H1
 
-![MOREFINE H1](Morefine_H1/Morefine_H1.jpg)
+![MOREFINE H1](./morefine_h1.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.morefine.com/product/morefine-h1-amd-ryzen-ai-max-pro-395-mini-pc)]
 

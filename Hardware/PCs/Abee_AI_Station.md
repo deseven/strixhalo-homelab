@@ -1,6 +1,6 @@
 # Abee AI Station
 
-![Abee AI Station](Abee_AI_Station/abee_ai_station.jpg)
+![Abee AI Station](./abee_ai_station.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.abeepc.com/BarebonePCs/166.html)]
 
