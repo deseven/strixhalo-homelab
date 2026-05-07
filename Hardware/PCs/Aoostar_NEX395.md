@@ -34,9 +34,3 @@ Availability: 2025 in China, global availability confirmed.
 ### Drivers & User Manual
 
 Information not yet publicly available. Expected to be similar to other Strix Halo mini-PCs.
-
-### Related Pages
-
-- [[Hardware/Boards/Sixunited_AXB35]] (possible board variant)
-- [[Hardware/PCs/GMKtec_EVO-X2]]
-- [[Hardware/PCs/Minisforum_MS-S1_MAX]]
