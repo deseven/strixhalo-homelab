@@ -2,6 +2,7 @@
 One of the first Strix Halo boards, used in many Chinese PCs along with a cooling system. First revisions go back to at least October of 2024 (marked `SU_AXB35_FB11`).
 
 **Known PCs:**
+ - [[Sixunited AXB35-02|Hardware/PCs/Sixunited_AXB35-02]]
  - [[GMKtec EVO-X2|Hardware/PCs/GMKtec_EVO-X2]] (V21 & V22)
  - [[Bosgame M5|Hardware/PCs/Bosgame_M5]]
  - [[FEVM FA-EX9|Hardware/PCs/FEVM_FA-EX9]] (V22 & V30)
