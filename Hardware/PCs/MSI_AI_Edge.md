@@ -25,4 +25,3 @@ MSI's second AI-branded mini-PC / compact desktop, announced in January 2026 and
 MSI has not announced pricing or final availability at the time of the launch article. Notebookcheck also notes that MSI may eventually offer lower-tier Ryzen AI Max variants, but the company has only publicly shown the Ryzen AI Max+ 395 model so far.
 
 Source context: [Notebookcheck article](https://www.notebookcheck.net/MSI-AI-Edge-mini-PC-based-on-AMD-Ryzen-AI-Max-395-and-128-GB-LPDDR5X-RAM-launching-soon.1199933.0.html)
-
