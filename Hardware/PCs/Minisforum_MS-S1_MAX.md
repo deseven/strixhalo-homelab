@@ -6,6 +6,9 @@
 
 Something interesting with unique(?) board, cooling, 2x10G ethernet and integrated PSU.
 
+### User Manual
+- [English User Manual](./MS-S1-SHWSA-UserManual-English-V1.0.pdf)
+
 Availability: September 2025.
 
 > [!NOTE]
