@@ -22,15 +22,6 @@ Availability: 2025 in China, global availability confirmed.
 - **Power Supply**: Integrated PSU
 - **Design**: Mac Studio-style compact chassis
 
-### Pricing
-
-- China: ~$2,100+ (at 2025 exchange rates)
-- Global pricing: To be announced
-
-### Reviews
-
-- [Notebookcheck: Aoostar Nex 395 confirmed for global launch](https://www.notebookcheck.net/Aoostar-Nex-395-confirmed-for-global-launch-with-powerful-AMD-Ryzen-AI-Max-395.1180581.0.html)
-
 ### Drivers & User Manual
 
 Information not yet publicly available. Expected to be similar to other Strix Halo mini-PCs.

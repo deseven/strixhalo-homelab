@@ -7,7 +7,7 @@
 
 Infplane's Hilbert is a portable agentic supercomputer aimed at coding, agent workflows, local AI, CAD/EDA, and gaming. The launch messaging centers on an AMD Ryzen AI Max+ 395 platform, high-bandwidth local memory, and a compact 199 mm cube chassis.
 
-Availability: crowdfunding / reserve-now launch. Super Early Bird pricing starts at $2,999, with MSRP listed at $3,999 and the first 200 pre-launch backers eligible for the early offer.
+Availability: crowdfunding / reserve-now launch.
 
 ### Highlights
 - Designed for coding and creating agent workflows.

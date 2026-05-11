@@ -22,14 +22,9 @@ Availability: announced and listed for sale in late 2025.
 - **Dimensions**: about 9.8 x 7.4 x 3.8 inches
 - **Operating system**: Windows 11 Pro
 
-## Pricing
+## Platform
 
-- Notebookcheck reported direct sales starting at $2,099
-- Morefine's store page showed a $3,099 configuration for the 128GB RAM and 2TB SSD model
-
-## Reviews
-
-- [Notebookcheck: Morefine H1 comes with 128GB RAM, AMD Ryzen AI Max+ Pro 395 and 2TB SSD](https://www.notebookcheck.net/Morefine-H1-Mini-PC-comes-with-128GB-RAM-AMD-Ryzen-AI-Max-Pro-395-and-2TB-SSD.1139151.0.html)
+Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
 
 ## Drivers & User Manual
 

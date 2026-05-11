@@ -22,12 +22,10 @@ Availability: not announced yet.
 - **Cooling**: three individual fans
 - **Dimensions**: 205 x 192 x 70 mm
 
+### Platform
+
+Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
+
 ### Notes
 
-- Notebookcheck describes it as a relatively compact desktop PC aimed at demanding workloads and AI applications.
 - The product page still appears to be in an early or gated state, so details may change before launch.
-
-
-### Reviews
-
-- [Notebookcheck article](https://www.notebookcheck.net/Minix-Elite-ER939-AI-High-performance-mini-workstation-powered-by-AMD-Ryzen-AI-Max-395.1143300.0.html)
