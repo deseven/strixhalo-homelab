@@ -42,7 +42,14 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **1.07 20250912** | N/A | This BIOS was dumped from a unit bought in October. | [AXB35-02_BOSGAME_SW1.07_20250912.rom](./AXB35-02_BOSGAME_SW1.07_20250912.rom) |
+>|| **1.09 20260508** | N/A | Got from Bosgame support, `PCBV2.0X` mentioned in the filename doesn't seem to be important, the BIOS works even on the earliest revisions of the board. | [AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip](./AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip) |
+>|| **1.07 20250912** | N/A | This BIOS was dumped from a unit bought in October 2025. | [AXB35-02_BOSGAME_SW1.07_20250912.rom](./AXB35-02_BOSGAME_SW1.07_20250912.rom) |
+>|
+>|**EC Firmware**
+>|
+>|| Version  | Official Changelog | Notes | Download |
+>|| -------- | ------------------ | ----- | -------- |
+>|| **1.06** | N/A | N/A | [EC-AXB35-02-1.06-BG.zip](./EC-AXB35-02-1.06-BG.zip) |
 
 >|# Corsair AI Workstation 300
 >|
