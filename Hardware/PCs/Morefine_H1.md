@@ -2,7 +2,7 @@
 
 ![MOREFINE H1](./morefine_h1.jpg)
 
-[[OFFICIAL PRODUCT PAGE](https://www.morefine.com/product/morefine-h1-amd-ryzen-ai-max-pro-395-mini-pc)]
+[[OFFICIAL PRODUCT PAGE](https://www.morefine.com/products/morefine-s500-r5-5600h-r5-7430u-ddr4-mini-pc-%E5%89%AF%E6%9C%AC)]
 
 MOREFINE's flagship Strix Halo mini PC. The H1 ships with AMD Ryzen AI Max+ PRO 395, 128GB of LPDDR5x memory, and a 2TB SSD. It is positioned as a compact workstation-class system for AI and other heavy workloads.
 
@@ -28,4 +28,4 @@ Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
 
 ## Drivers & User Manual
 
-Morefine provides download folders for system images and drivers from the product page.
+Morefine provides download folders for [system images](https://drive.google.com/drive/folders/1Lp9VZBV62nG0FEJC1I_XChLr2e4Pob3m) and [drivers](https://drive.google.com/drive/folders/1g_ZBMSbvi4jaFXprNY73hancG2zIP-KU) from the product page.

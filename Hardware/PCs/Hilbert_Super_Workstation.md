@@ -45,7 +45,3 @@ Availability: crowdfunding / reserve-now launch.
 - Designed for agent workflows, CAD/EDA, image/video generation, TTS, and AAA gaming
 - Supports Windows, CachyOS, SteamOS, and Fedora
 - KLEENE enables dynamic power and performance coordination
-
-### Notes
-- Kickstarter launch materials and the product page both frame Hilbert as a desktop supercomputer rather than a conventional mini PC.
-- No storage specifications publicly disclosed; drive configuration not yet specified.
