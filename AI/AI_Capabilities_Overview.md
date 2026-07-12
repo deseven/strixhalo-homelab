@@ -113,7 +113,10 @@ If you are setting `page_pool_size` lower than the `pages_limit` you may want to
 The latest release version of ROCm (6.4.3 as of this writing) has both rocBLAS and hipBLASlt support for Strix Halo gfx1151. For the most up-to-date builds, you can also install the latest gfx1151 [TheRock/ROCm "nightly" release](https://github.com/ROCm/TheRock/blob/main/RELEASES.md). These can be found at [https://therock-nightly-tarball.s3.amazonaws.com/](https://therock-nightly-tarball.s3.amazonaws.com/) (find the filename) or you can use the helper scripts described in the [Releases page](https://github.com/ROCm/TheRock/blob/main/RELEASES.md).
 
 ### Performance Tips
-- If you are not using VFIO or any type of GPU passthrough, you should set `amd_iommu=off` in your kernel options for ~6% faster memory reads (actuall impact on llama.cpp tg performance tends to be smaller, about <2%. Note that when tested, `iommu=pt` does not give any speed benefit.
+- If you are not using VFIO or any type of GPU passthrough, you should set `amd_iommu=off` in your kernel options for ~6% faster memory reads (actuall impact on llama.cpp tg performance tends to be smaller, about <2%. Note that when tested, `iommu=pt` does not give any speed benefit. There are some caveats
+    - The AMD XDNA NPU driver explicitly does not support running without an IOOMU so `/dev/accel/accel0` would likely disappear
+    - Both USB4 controllers currently use IOMMU DMA production and disabling it would remove [protection against unauthorized device DMA](https://www.kernel.org/doc/html/latest/admin-guide/thunderbolt.html#dma-protection-utilizing-iommu)
+    - It also disabled interrupt remapping and device isolation system-wide (so a no-go if you're using VMs or similar), see also the [AMD ROCm IOMMU guidance](https://rocm.docs.amd.com/en/docs-6.3.1/conceptual/iommu.html) - they recommend `iommu=pt` (but as mentioned, no inference performance improvement was observed in testing)
 - You can improve further improve performance with [tuned](https://tuned-project.org/) and switching to the `accelerator-performance` profile:
   - Raises raw Vulkan memory bandwidth performance by about 3%
   - Seems to have minimal effect on `tg` but improves llama.cpp `pp512` performance by 5-8% (!!!)
