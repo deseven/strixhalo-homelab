@@ -124,10 +124,11 @@ This creates a buffer at each level that prevents the fan from rapidly switching
 
 Curves are being applied only when `curve` mode is set on a specific fan, each fan has their own curves.
 
-
 ### Solution for Windows
 Based on the research made for the Linux module [a Windows implementation has been written as well](https://github.com/deseven/ec-su_axb35-win). The only major limitation is the need to disable Secure Boot, everything else should be pretty simple, just follow the readme in the repo.
 
+Alternatively, there's also a [Fan Control](https://getfancontrol.com/) plugin available that implements the same kind of EC control/monitoring without the need to disable Secure Boot:  
+<https://github.com/pajtony/FanControl.AXB35>
 
 ### Fine-tuning Power Limits
 If you want more gradual control over power modes, there's a [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) utility (or [UXTU](https://amdaputuningutility.com) for Windows).
