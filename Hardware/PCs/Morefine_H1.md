@@ -2,7 +2,7 @@
 
 ![MOREFINE H1](./morefine_h1.jpg)
 
-[[OFFICIAL PRODUCT PAGE](https://www.morefine.com/products/morefine-s500-r5-5600h-r5-7430u-ddr4-mini-pc-%E5%89%AF%E6%9C%AC)]
+[[OFFICIAL PRODUCT PAGE](https://www.morefine.com/products/morefine-h1-amd-ai-395-lpddr5x-mini-pc)]
 
 MOREFINE's flagship Strix Halo mini PC. The H1 ships with AMD Ryzen AI Max+ PRO 395, 128GB of LPDDR5x memory, and a 2TB SSD. It is positioned as a compact workstation-class system for AI and other heavy workloads.
 

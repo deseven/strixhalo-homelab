@@ -22,4 +22,4 @@ High-end mini PC featuring the AMD Ryzen AI+ Max 395 APU with advanced liquid co
 
 ## Availability
 
-Released in China (November 2025) at approximately CNY 17,999 (~$2,525). Global availability has not been announced.
+Released in China (November 2025). Global availability has not been announced.
