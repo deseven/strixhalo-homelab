@@ -1,6 +1,6 @@
 # Minix ER939-AI
 
-![Minix ER939-AI](./minix-er939-ai.jpg)
+[![Minix ER939-AI](./minix-er939-ai.jpg?thumbnail=400)](./minix-er939-ai.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.minix.com.hk/products/minix-er939-ai-amd-ryzen-ai-max-395-mini-pc-eu)] - currently redirects into a Shop app session, so public pricing and availability are not clearly published.
 

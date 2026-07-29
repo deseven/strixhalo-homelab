@@ -1,6 +1,6 @@
 # Hilbert Super Workstation
 
-![Hilbert Super Workstation](./hilbert_super_workstation.jpg)
+[![Hilbert Super Workstation](./hilbert_super_workstation.jpg?thumbnail=400)](./hilbert_super_workstation.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://hilbert.infplane.com/pages/hilbert)]
 [[KICKSTARTER DESCRIPTION](https://www.kickstarter.com/projects/infplane/hilbert-agentic-computer/description)]

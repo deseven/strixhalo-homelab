@@ -1,6 +1,6 @@
 # MOREFINE H1
 
-![MOREFINE H1](./morefine_h1.jpg)
+[![MOREFINE H1](./morefine_h1.jpg?thumbnail=400)](./morefine_h1.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.morefine.com/products/morefine-h1-amd-ai-395-lpddr5x-mini-pc)]
 

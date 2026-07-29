@@ -1,6 +1,6 @@
 # MSI AI Edge
 
-![MSI AI Edge](./msi-ai-edge.jpg)
+[![MSI AI Edge](./msi-ai-edge.jpg?thumbnail=400)](./msi-ai-edge.jpg)
 
 [[MSI Launches AI Edge Series Desktop, Pioneering the Next Era of Edge AI Computing](https://www.msi.com/news/detail/MSI-Launches-AI-Edge-Series-Desktop--Pioneering-the-Next-Era-of-Edge-AI-Computing-147555)]
 
