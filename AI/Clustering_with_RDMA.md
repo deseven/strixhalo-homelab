@@ -147,6 +147,13 @@ On PC2:
 ```
 So around 1.12µs which is an expected value. Great!
 
-Next, follow the [AMD Strix Halo RDMA Cluster Setup Guide](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md)
+Verify link:
+```
+$ rdma link
+link ibp195s0/1 subnet_prefix fe80:0000:0000:0000 lid 2 sm_lid 1 lmc 0 state ACTIVE physical_state LINK_UP netdev ibp195s0 
+link ibp195s0/2 subnet_prefix fe80:0000:0000:0000 lid 0 sm_lid 0 lmc 0 state DOWN physical_state POLLING netdev ibp195s0d1 
+```
+
+Next, follow the [AMD Strix Halo RDMA Cluster Setup Guide](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md) starting at Step 4.4.
 
 To be continued, it's still work in progress.
