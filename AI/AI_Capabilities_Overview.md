@@ -158,6 +158,7 @@ For more on how to test llama.cpp performance:
 - [[AI/llamacpp-performance]]
 
 ### Additional Resources
+ - Reproducible local LLM setup and benchmark evidence: [Strix Halo Guide](https://github.com/hogeheer499-commits/strix-halo-guide) - copyable Ubuntu, Vulkan/RADV, Ollama, and llama.cpp setup; structured benchmark claims; raw logs; failed paths; and cross-system community reproductions
  - Deep dive into LLM usage on Strix Halo: https://llm-tracker.info/_TOORG/Strix-Halo
  - Newbie Linux inference guide: https://github.com/renaudrenaud/local_inference
  - Ready to use Docker containers: https://github.com/kyuz0/amd-strix-halo-toolboxes
