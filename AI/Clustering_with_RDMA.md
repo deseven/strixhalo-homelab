@@ -1,8 +1,10 @@
 # Clustering with RDMA
 
 With RDMA and low latencies like 1µs, tensor parallelism can provide a speedup. 
-Unfortunately, it's not yet possible using the USB4/Thunderbolt 3 ports of the Strix Halo.
-So we need some extra hardware: Network adapters that are able to offload the CPU for this task, connected via PCIe.
+
+You can use the USB4/Thunderbolt 3 ports of your Strix Halo to do some soft-RDMA. Check out this repo to run DeepSeek V4 Flash that way.
+
+If you're willing to invest in some extra hardware, you will get even lower latency than that and thus better performance. What's needed are network adapters that can offload the CPU for this task, connected via PCIe. There are two options, RoCe and Infiniband. Infiniband gives slightly lower latency, so that's what I'll be talking about here.
 
 ## Clustering with Oculink and PCIe 3.0 Infiniband cards
 
