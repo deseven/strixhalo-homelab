@@ -159,6 +159,6 @@ link ibp195s0/2 subnet_prefix fe80:0000:0000:0000 lid 0 sm_lid 0 lmc 0 state DOW
 Next, you can either 
 - follow the [AMD Strix Halo RDMA Cluster Setup Guide](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md) starting at Step 4.4. or
 
-- check out [this repo](https://github.com/neuhaus/ds4-vllm/tree/feature/infiniband-mlx4) for vLLM in a container with tensor parallelism and DSpark serving DeepSeek V4 Flash-0731 with 512k context. Thanks to [antirez](https://github.com/antirez/ds4), [kyuz0](https://github.com/kyuz0/ds4) and [AlexKGwyn](https://github.com/AlexKGwyn/ds4-vllm) for making it possible.
+- check out [this repo](https://github.com/neuhaus/ds4-vllm/tree/feature/infiniband-mlx4) for vLLM in a container with tensor parallelism and DSpark serving DeepSeek V4 Flash-0731 with 512k context. Thanks to [vLLM](https://vllm.ai), [kyuz0](https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes) and [AlexKGwyn](https://github.com/AlexKGwyn/ds4-vllm) for making it possible.
 
 To be continued, it's still work in progress.
