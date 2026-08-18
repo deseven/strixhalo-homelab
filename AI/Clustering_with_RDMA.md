@@ -10,19 +10,19 @@ If you're willing to invest in some extra hardware, you will get even lower late
 
 The two Bosgame M5 PCs used for this setup have neither an Oculink port nor a PCIe slot. So we use M.2 to Oculink adapters to get PCIe 4.0 x4 for the NICs. Here's some hardware used for a setup with cheap used Mellanox cards. The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
 
-* 2x Strix Halo with a spare M.2 slot (tested using Bosgame M5)
-* 1x ATX PC PSU (any will do, needs just 20 Watts). I'm using a PicoPSU (20€).
-* 2x Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each.
-* 1x DAC cable Mellanox 56G QSFP+ FDR InfiniBand DAC Copper Twinax Passiv 0.5m MC2207130-00A, used, 18€ [example link](https://www.ebay.de/itm/126922287689)
-* 1x ATX PSU 24pin splitter cable [example link](https://a.aliexpress.com/_Ezm7My8) ($6 with coins)
-* 2x Oculink M.2 adapter, cable, PCIe 4.0 x16 slot [example link](https://a.aliexpress.com/_Ez9CgPK) (~$25 each with coins and coupons)
+* 2× Strix Halo with a spare M.2 slot (tested using Bosgame M5)
+* 1× ATX PC PSU (any will do, needs just 20 Watts). I'm using a PicoPSU (20€).
+* 2× Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each.
+* 1× DAC cable Mellanox 56G QSFP+ FDR InfiniBand DAC Copper Twinax Passiv 0.5m MC2207130-00A, used, 18€ [example link](https://www.ebay.de/itm/126922287689)
+* 1× ATX PSU 24pin splitter cable [example link](https://a.aliexpress.com/_Ezm7My8) ($6 with coins)
+* 2× Oculink M.2 adapter, cable, PCIe 4.0 x16 slot [example link](https://a.aliexpress.com/_Ez9CgPK) (~$25 each with coins and coupons)
  
-Total cost: 20€+46€+18€+49€ = 133€ Not bad!
+Total cost: 20€+2×23€+18€+49€ = 133€ Not bad!
 
 What else is needed:
 
 * a little 3d printed custom case for the two network cards
-* 2x 3d printed lids for the SSD compartment with a hole for the Oculink cable. Or you drill a hole in the original metal lids.
+* 2× 3d printed lids for the SSD compartment with a hole for the Oculink cable. Or you drill a hole in the original metal lids.
 * a little fan to keep the Mellanox cards cool inside the case (they use up to 10W each)
 
 ### Quick howto:
@@ -125,7 +125,7 @@ Kabelgebundene Verbindung 1  dea9361f-0f51-3acf-9b85-04a35c116b67  ethernet    e
 ib-conn                      5eaa86fe-99e7-48c9-b460-740d31adc936  infiniband  ibp195s0     
 thunderbolt0                 bd7e1a3c-f05d-3a43-bfc0-880fb874dba4  ethernet    thunderbolt0 
 ```
-Check with „ip a“ if the infiniband interfaces are up. If not, check on PC1 if opensm is giving errors?
+Check with "ip a" if the infiniband interfaces are up. If not, check on PC1 if opensm is giving errors?
 
 OK, if the connection is up, we can check the bandwidth:
 
