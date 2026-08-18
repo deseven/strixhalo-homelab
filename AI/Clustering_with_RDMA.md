@@ -2,7 +2,7 @@
 
 With RDMA and low latencies like 1µs, tensor parallelism can provide a speedup. 
 
-You can use the USB4/Thunderbolt 3 ports of your Strix Halo to do some soft-RDMA. Check out this repo to run DeepSeek V4 Flash that way.
+You can use the USB4/Thunderbolt 3 ports of your Strix Halo to do some soft-RDMA. Check out [this repo](https://github.com/AlexKGwyn/ds4-vllm) to run DeepSeek V4 Flash that way.
 
 If you're willing to invest in some extra hardware, you will get even lower latency than that and thus better performance. What's needed are network adapters that can offload the CPU for this task, connected via PCIe. There are two options, RoCe and Infiniband. Infiniband gives slightly lower latency, so that's what I'll be talking about here.
 
