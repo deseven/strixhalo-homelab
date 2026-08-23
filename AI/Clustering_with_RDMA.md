@@ -11,7 +11,7 @@ If you're willing to invest in some extra hardware, you will get even lower late
 The two Bosgame M5 PCs used for this setup have neither an Oculink port nor a PCIe slot. So we use M.2 to Oculink adapters to get PCIe 4.0 x4 for the NICs. Here's some hardware used for a setup with cheap used Mellanox cards. The more recent PCIe 4.0 cards are quite a bit more expensive than the older cards. The PCIe 3.0 x4 connection limits the cards to speeds of around 26GBit/s. Not too shabby.
 
 * 2× Strix Halo with a spare M.2 slot (tested using Bosgame M5)
-* 1× ATX PC PSU (any will do, needs just 20 Watts). I'm using a PicoPSU (20€).
+* 1× ATX PC PSU (any will do, needs just 20 Watts). Me: PicoPSU, used, 20€.
 * 2× Mellanox ConnectX-3 CX354A PCIe 3.0 x8 infiniband cards, used, 23€ each.
 * 1× DAC cable Mellanox 56G QSFP+ FDR InfiniBand DAC Copper Twinax Passiv 0.5m MC2207130-00A, used, 18€ [example link](https://www.ebay.de/itm/126922287689)
 * 1× ATX PSU 24pin splitter cable [example link](https://a.aliexpress.com/_Ezm7My8) ($6 with coins)
