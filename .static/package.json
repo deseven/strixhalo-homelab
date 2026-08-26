@@ -1,0 +1,17 @@
+{
+  "name": "strixhalo-homelab-static",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "markdown-it": "^15.0.0",
+    "markdown-it-anchor": "^9.2.1",
+    "markdown-it-github-alerts": "^1.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
