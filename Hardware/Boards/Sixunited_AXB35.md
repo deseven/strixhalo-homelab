@@ -7,7 +7,9 @@ One of the first Strix Halo boards, used in many Chinese PCs along with a coolin
  - [[FEVM FA-EX9|Hardware/PCs/FEVM_FA-EX9]] (V22 & V30)
  - [[NIMO AI MiniPC|Hardware/PCs/NIMO_AI_MiniPC]]
 
-There's also at least one [custom case available for printing](https://makerworld.com/en/models/2448273-bosgame-m5-silent-pc-case-80mm-fans), along with a 3D scan of the full board.
+Custom cases for printing/machining:
+- https://www.printables.com/model/1765345-cool-quiet-case-for-ryzen-ai-max-395-sixunited-axb/files
+- https://makerworld.com/en/models/2448273-bosgame-m5-silent-pc-case-80mm-fans
 
 ### Power
 The board supports 3 different power limits - 55W (100W burst), 85W (120W burst), and 120W (140W burst):
