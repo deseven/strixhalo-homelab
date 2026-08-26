@@ -1,6 +1,6 @@
 # Beelink GTR9 Pro
 
-![Beelink GTR9 Pro](./beelink_gtr9.jpg)
+![Beelink GTR9 Pro](./Beelink_GTR9_Pro/beelink_gtr9.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.bee-link.com/products/beelink-gtr9-pro-amd-ryzen-ai-max-395)]
 

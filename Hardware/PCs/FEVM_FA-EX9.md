@@ -1,6 +1,6 @@
 # FEVM FA-EX9
 
-![FEVM FA-EX9](./fevm_fa_ex9.jpg)
+![FEVM FA-EX9](./FEVM_FA-EX9/fevm_fa_ex9.jpg)
 
 Yet another mini PC based on the [[Sixunited's AXB35 board|Hardware/Boards/Sixunited_AXB35]].
 

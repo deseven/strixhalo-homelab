@@ -1,6 +1,6 @@
 # GEEKOM A9 Mega
 
-![Geekom A9 Mega](./geekom-a9-mega.png)
+![Geekom A9 Mega](./GEEKOM A9 Mega/geekom-a9-mega.png)
 
 [[OFFICIAL PRODUCT PAGE](https://www.geekompc.com/geekom-a9-mega-mini-pc/)]
 

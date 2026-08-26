@@ -63,7 +63,7 @@ As noted above, in order to use a desktop environment, you can passthrough a USB
 
 
 Proxmox VM:  
-![8060s GPU Passthrough in Proxmox](./proxmox-8060s-passthrough.png)
+![8060s GPU Passthrough in Proxmox](./VM_iGPU_Passthrough/proxmox-8060s-passthrough.png)
 
 ### Windows VMs
  - hardware IDs are `1002:1586` (iGPU) and `1002:1640` (audio)
@@ -107,5 +107,5 @@ https://community.frame.work/t/anyone-using-proxmox-ve/74863/6?u=beralt
 
 
 (taken from [[EVO-X2|Hardware/PCs/GMKtec_EVO-X2]], BIOS version 1.04)
- - [vbios_8060s.bin](./vbios_8060s.bin)
- - [AMDGopDriver.rom](./AMDGopDriver.rom)
+ - [vbios_8060s.bin](./VM_iGPU_Passthrough/vbios_8060s.bin)
+ - [AMDGopDriver.rom](./VM_iGPU_Passthrough/AMDGopDriver.rom)

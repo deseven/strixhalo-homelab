@@ -91,7 +91,7 @@ Some examples:
  - `echo balanced > /sys/class/ec_su_axb35/apu/power_mode` to set power mode to balanced (85W)
 
 You can also call `su_axb35_monitor` anywhere to monitor all available values in realtime:  
-![su_axb35_monitor](./su_axb35_monitor.png)
+![su_axb35_monitor](./Power_Mode_and_Fan_Control/su_axb35_monitor.png)
 
 To apply specific settings at system startup, place them in your `rc.local` file or utilize any other methods for executing commands during boot, such as creating a systemd unit. In the future, these parameters will also be configurable through module options.
 

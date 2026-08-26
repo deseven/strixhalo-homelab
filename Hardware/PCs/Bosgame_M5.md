@@ -1,6 +1,6 @@
 # Bosgame M5
 
-![Bosgame M5](./bosgame-m5.jpg)
+![Bosgame M5](./Bosgame_M5/bosgame-m5.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.bosgame.com/products/bosgame-m5-ai-mini-desktop-ryzen-ai-max-395-96gb-128gb-2tb)]  - [Official trailer video](https://www.youtube.com/watch?v=mS-xdB4Vb4U)
 

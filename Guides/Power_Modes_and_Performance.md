@@ -102,7 +102,7 @@ Let's look on the average increase between different modes for each category:
 
 Or represented on the chart:
 
-![](./PowerModesvsPerformance.png)
+![](./Power_Modes_and_Performance/PowerModesvsPerformance.png)
 
 A classic situation of diminishing returns, where **85W mode seems to be the sweet spot** and a good compromise between performance gain and power consumption.
 
