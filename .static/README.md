@@ -27,12 +27,12 @@ maps an extension-less path onto the real `.html` file. Example nginx config
 server {
     listen 80;
     server_name wiki.example.com;
-    root /var/www/wiki;   # <- the build output (dist/)
+    root /var/www/wiki/.static/dist;   # <- the build output
 
     location / {
         # `$uri` for real files, `$uri/` for directories (index.html),
         # `$uri.html` for the extension-less page links.
-        try_files $uri $uri/ $uri.html =404;
+        try_files $uri $uri.html $uri/ =404;
     }
 }
 ```
