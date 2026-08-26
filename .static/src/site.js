@@ -4,21 +4,31 @@
 (() => {
   "use strict";
 
-  // ---- mobile tree ----
+  // ---- mobile drawers (pages tree + TOC) ----
   const menuBtn = document.getElementById("menu-btn");
-  const mobileTree = document.getElementById("mobile-tree");
-  function openMenu() {
-    if (mobileTree) mobileTree.classList.add("open");
+  const tocBtn = document.getElementById("toc-btn");
+  const mobileDrawers = Array.from(document.querySelectorAll(".mobile-drawer"));
+  function openDrawer(drawer) {
+    if (!drawer) return;
+    // Only one drawer open at a time.
+    mobileDrawers.forEach((d) => d.classList.remove("open"));
+    drawer.classList.add("open");
   }
-  function closeMenu() {
-    if (mobileTree) mobileTree.classList.remove("open");
+  function closeDrawers() {
+    mobileDrawers.forEach((d) => d.classList.remove("open"));
   }
-  if (menuBtn) menuBtn.addEventListener("click", openMenu);
-  if (mobileTree) {
-    mobileTree.addEventListener("click", (e) => {
-      if (e.target.closest("[data-close]") || e.target.closest("a")) closeMenu();
+  if (menuBtn) {
+    menuBtn.addEventListener("click", () => openDrawer(document.getElementById("mobile-tree")));
+  }
+  if (tocBtn) {
+    tocBtn.addEventListener("click", () => openDrawer(document.getElementById("mobile-toc")));
+  }
+  // Close on backdrop click or when navigating (any link click).
+  mobileDrawers.forEach((drawer) => {
+    drawer.addEventListener("click", (e) => {
+      if (e.target.closest("[data-close]") || e.target.closest("a")) closeDrawers();
     });
-  }
+  });
 
   // ---- tree filter ----
   // Works with Web Awesome wa-tree: hides wa-tree-item elements (via a class,
@@ -116,6 +126,7 @@
     setTimeout(run, 2000);
   };
   if (tree) initTree(tree);
+  const mobileTree = document.getElementById("mobile-tree");
   if (mobileTree) initTree(mobileTree);
 
   // ---- whole-row click navigation ----
@@ -139,35 +150,39 @@
   if (mobileTree) wireRowClicks(mobileTree);
 
   // ---- toc scrollspy ----
-  const toc = document.getElementById("toc");
+  // Handles both the desktop rail (#toc) and the mobile TOC drawer
+  // (#toc-mobile); they share the same hrefs so one observer drives both.
   const content = document.getElementById("content");
-  if (toc && content && "IntersectionObserver" in window) {
-    const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const tocRoots = [document.getElementById("toc"), document.getElementById("toc-mobile")].filter(Boolean);
+  if (tocRoots.length && content && "IntersectionObserver" in window) {
+    const links = tocRoots.flatMap((root) => Array.from(root.querySelectorAll("a[href^='#']")));
     const map = new Map();
     for (const a of links) {
       const id = a.getAttribute("href").slice(1);
       const el = document.getElementById(id);
-      if (el) map.set(el, a);
+      if (!el) continue;
+      if (!map.has(el)) map.set(el, []);
+      map.get(el).push(a);
     }
-    links.forEach((a) => a.classList.add("toc-inactive"));
     const setActive = (el) => {
+      // Clear active on both TOCs, then highlight all links for this heading.
       links.forEach((a) => {
         a.classList.remove("toc-active");
         a.classList.add("toc-inactive");
       });
-      if (el) {
-        el.classList.add("toc-active");
-        el.classList.remove("toc-inactive");
+      for (const a of map.get(el) || []) {
+        a.classList.add("toc-active");
+        a.classList.remove("toc-inactive");
       }
     };
     const io = new IntersectionObserver(
       (entries) => {
         for (const en of entries) {
-          if (en.isIntersecting) setActive(map.get(en.target));
+          if (en.isIntersecting) setActive(en.target);
         }
       },
       { rootMargin: "-15% 0px -70% 0px", threshold: 0 }
     );
-    map.forEach((a, el) => io.observe(el));
+    map.forEach((linksForEl, el) => io.observe(el));
   }
 })();

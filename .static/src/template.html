@@ -2,8 +2,6 @@
 <html lang="en" class="wa-theme-default wa-palette-default wa-brand-blue">
 <head>
   <script>
-    // Follow the OS/browser color scheme: apply wa-light/wa-dark so the Web
-    // Awesome theme tokens and the page shell share one coherent look.
     (() => {
       const root = document.documentElement;
       const dark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -41,9 +39,6 @@
     }
     @media (min-width: 64rem) {
       .layout {
-        /* Sidebar | content | TOC. The two nav rails are kept deliberately
-           slim (~16rem and ~13rem) so the central reading column gets more
-           room. */
         grid-template-columns: 16rem minmax(0, 1fr) 13rem;
       }
       .layout.no-toc {
@@ -121,7 +116,10 @@
       color: var(--wa-color-text-quiet);
       display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem;
     }
-    .page-footer a { color: var(--wa-color-text-normal); }
+    .page-footer a {
+      color: var(--wa-color-text-normal);
+      overflow-wrap: anywhere;
+    }
     .page-footer a:hover { color: var(--wa-color-text-link); }
 
     .sidebar-open { display: block; }
@@ -129,9 +127,6 @@
       .sidebar-open { display: flex; }
     }
 
-    /* Mobile top bar: a solid bar fixed at the top of the viewport holding
-       the "Pages" toggle. It stays visible while scrolling (fixed) but is
-       part of the page chrome, not a floating FAB. */
     .mobile-nav {
       display: none;
       position: fixed;
@@ -147,8 +142,13 @@
     @media (max-width: 63.999rem) {
       .mobile-nav { display: flex; }
     }
-    #menu-btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
+    @media (min-width: 64rem) {
+      #menu-btn, #toc-btn { display: none; }
+    }
+    .mobile-nav-spacer { flex: 1; }
+    .mobile-nav .nav-btn {
+      flex-shrink: 0;
+      display: inline-flex; align-items: center; gap: 0.4rem;
       padding: 0.45rem 0.9rem;
       font: inherit; font-size: 0.875rem; font-weight: 600;
       color: var(--wa-color-brand-on-loud, #fff);
@@ -156,47 +156,41 @@
       border: 0; border-radius: 9999px;
       cursor: pointer;
     }
-    @media (min-width: 64rem) { #menu-btn { display: none; } }
-    #menu-btn:hover { background: var(--wa-color-brand-fill-normal); }
-    .mobile-nav-title {
-      font-size: 1rem; font-weight: 700;
-      color: var(--wa-color-text-normal);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
+    .mobile-nav .nav-btn:hover { background: var(--wa-color-brand-fill-normal); }
 
-    /* On mobile the fixed top bar overlays the top of the content column, so
-       reserve space at the start of the content so the title never hides
-       under the bar. */
     @media (max-width: 63.999rem) {
       .content-wrap { padding-top: 5.5rem; }
     }
 
-    /* ---- mobile drawer ---- */
-    /* The drawer (and its backdrop) layer above the top bar so the menu is
-       never partially hidden while it opens. */
-    #mobile-tree {
+    /* ---- mobile drawers ---- */
+    .mobile-drawer {
       position: fixed; inset: 0; z-index: 40; display: none;
     }
-    #mobile-tree.open { display: block; }
-    #mobile-tree .backdrop {
+    .mobile-drawer.open { display: block; }
+    .mobile-drawer .backdrop {
       position: absolute; inset: 0;
       background: rgb(0 0 0 / 0.6);
     }
-    #mobile-tree .drawer {
-      position: absolute; left: 0; top: 0; height: 100%;
+    .mobile-drawer .drawer {
+      position: absolute; top: 0; height: 100%;
       width: 20rem; max-width: 85vw;
       background: var(--wa-color-surface-raised);
-      border-inline-end: 1px solid var(--wa-color-surface-border);
       overflow-y: auto; padding: 1rem;
+    }
+    #mobile-tree .drawer {
+      left: 0;
+      border-inline-end: 1px solid var(--wa-color-surface-border);
+    }
+    #mobile-toc .drawer {
+      right: 0;
+      border-inline-start: 1px solid var(--wa-color-surface-border);
     }
 
     /* ---- content prose ---- */
     #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
       scroll-margin-top: 1.5rem;
     }
-    /* GitHub-style alerts (markdown-alert markup emitted by markdown-it-github-alerts).
-       The left border is deliberately thick and tinted per type so alerts
-       read as highlighted call-outs, not plain gray boxes. */
+    /* GitHub-style alerts (markdown-alert markup emitted by markdown-it-github-alerts).*/
     .markdown-alert {
       border-left: 6px solid var(--wa-color-surface-border);
       border-radius: 0 0.5rem 0.5rem 0;
@@ -240,18 +234,20 @@
       background: var(--wa-color-surface-raised);
       border-inline-start: 1px solid var(--wa-color-surface-border);
     }
+    /* On mobile the desktop TOC rail is hidden; "On this page" opens as a
+       right-side drawer via #toc-btn in the top bar. */
+    @media (max-width: 63.999rem) {
+      #toc-nav { display: none; }
+    }
     .toc-header {
       padding: 1rem 1.25rem;
       font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
       color: var(--wa-color-text-quiet);
       border-bottom: 1px solid var(--wa-color-surface-border);
     }
-    #toc { padding: 1rem 1rem 1.5rem; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.125rem; }
+    .toc-list { padding: 1rem 1rem 1.5rem; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.125rem; }
 
     /* ---- tables: allow wrapping of long words/URLs ---- */
-    /* WA native tables don't break long unbroken strings, so wide cells push
-       the table out of the content column. Allow breaking anywhere so big
-       words wrap instead. */
     #content table {
       table-layout: auto;
       min-width: 0;
@@ -261,17 +257,21 @@
       overflow-wrap: anywhere;
       word-break: normal;
     }
-    #toc a {
+    #content a {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .toc-list a {
       color: var(--wa-color-text-quiet);
       text-decoration: none;
       padding: 0.25rem 0.5rem;
       border-radius: 0.375rem;
     }
-    #toc a:hover { color: var(--wa-color-text-normal); background: color-mix(in srgb, var(--wa-color-surface-raised) 50%, transparent); }
-    #toc a.toc-level-2 { padding-left: 0.5rem; }
-    #toc a.toc-level-3 { padding-left: 1.25rem; }
-    #toc a.toc-level-4 { padding-left: 2rem; }
-    #toc a.toc-active { color: var(--wa-color-text-link); font-weight: 600; }
+    .toc-list a:hover { color: var(--wa-color-text-normal); background: color-mix(in srgb, var(--wa-color-surface-raised) 50%, transparent); }
+    .toc-list a.toc-level-2 { padding-left: 0.5rem; }
+    .toc-list a.toc-level-3 { padding-left: 1.25rem; }
+    .toc-list a.toc-level-4 { padding-left: 2rem; }
+    .toc-list a.toc-active { color: var(--wa-color-text-link); font-weight: 600; }
 
     /* ---- tree sizing ---- */
     wa-tree { font-size: 0.875rem; }
@@ -354,10 +354,10 @@
     </main>
 
     <% if (hasToc) { %>
-    <!-- right: on-this-page -->
+    <!-- right: on-this-page (desktop only; mobile uses #toc-btn drawer) -->
     <aside id="toc-nav" aria-label="On this page">
       <div class="toc-header">On this page</div>
-      <nav id="toc" aria-label="Table of contents">
+      <nav id="toc" class="toc-list" aria-label="Table of contents">
         <%- toc %>
       </nav>
     </aside>
@@ -365,8 +365,8 @@
 
   </div>
 
-  <!-- mobile tree -->
-  <div id="mobile-tree" aria-hidden="true" data-active-key="<%= escapeHtml(activeKey) %>">
+  <!-- mobile tree drawer -->
+  <div id="mobile-tree" class="mobile-drawer" aria-hidden="true" data-active-key="<%= escapeHtml(activeKey) %>">
     <div class="backdrop" data-close></div>
     <div class="drawer">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
@@ -381,9 +381,28 @@
   </div>
   <!-- mobile top bar (fixed) -->
   <header class="mobile-nav">
-    <button id="menu-btn" aria-label="Open pages menu">☰ Pages</button>
-    <span class="mobile-nav-title"><%= title %></span>
+    <button id="menu-btn" class="nav-btn" aria-label="Open pages menu">☰ Pages</button>
+    <span class="mobile-nav-spacer"></span>
+    <% if (hasToc) { %>
+    <button id="toc-btn" class="nav-btn" aria-label="Open table of contents">☰ On this page</button>
+    <% } %>
   </header>
+
+  <% if (hasToc) { %>
+  <!-- mobile TOC drawer -->
+  <div id="mobile-toc" class="mobile-drawer" aria-hidden="true">
+    <div class="backdrop" data-close></div>
+    <div class="drawer">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+        <span class="tree-section-header">On this page</span>
+        <button data-close aria-label="Close" style="background:none;border:0;color:var(--wa-color-text-quiet);font-size:1.25rem;cursor:pointer;">✕</button>
+      </div>
+      <nav id="toc-mobile" class="toc-list" aria-label="Table of contents">
+        <%- toc %>
+      </nav>
+    </div>
+  </div>
+  <% } %>
 
   <script><%- inlineJs %></script>
 </body>
