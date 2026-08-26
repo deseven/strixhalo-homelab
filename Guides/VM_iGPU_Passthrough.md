@@ -106,6 +106,6 @@ https://community.frame.work/t/anyone-using-proxmox-ve/74863/6?u=beralt
 ### Files
 
 
-(taken from [[EVO-X2|Hardware/PCs/GMKtec_EVO-X2]], BIOS version 1.04)
+(taken from [EVO-X2](../Hardware/PCs/GMKtec_EVO-X2.md), BIOS version 1.04)
  - [vbios_8060s.bin](./VM_iGPU_Passthrough/vbios_8060s.bin)
  - [AMDGopDriver.rom](./VM_iGPU_Passthrough/AMDGopDriver.rom)

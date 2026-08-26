@@ -22,4 +22,4 @@ Availability: Q3+ 2025.
 - 10GBit/s NICs built on the DB795M. They are PCIe 3.0 x4, no riser required. Bifurcation also doesn't seem to be required. The board includes a PLX. Get them for example at [AliExpress](https://www.aliexpress.com/p/wiki/article.html?keywords=xikestor-skn-2bt-m2). 
 
 ### Relevant Pages
- - [[Hardware/Boards/Framework_Desktop_Mainboard]]
+ - [Framework_Desktop_Mainboard](../Boards/Framework_Desktop_Mainboard.md)

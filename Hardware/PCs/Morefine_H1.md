@@ -24,7 +24,7 @@ Availability: announced and listed for sale in late 2025.
 
 ## Platform
 
-Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
+Built on the [Sixunited AXB35 board](../Boards/Sixunited_AXB35.md) platform.
 
 ## Drivers & User Manual
 

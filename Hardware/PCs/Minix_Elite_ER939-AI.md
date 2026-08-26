@@ -24,7 +24,7 @@ Availability: not announced yet.
 
 ### Platform
 
-Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
+Built on the [Sixunited AXB35 board](../Boards/Sixunited_AXB35.md) platform.
 
 ### Notes
 

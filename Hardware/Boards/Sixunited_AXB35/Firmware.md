@@ -13,7 +13,7 @@ All devices sent after the middle of May seem to have BIOS version of at least 1
 > - ‼️ **DO NOT turn off your computer or interrupt power**  
 > - ‼️ **DO NOT press any keys during this process**  
 > - ‼️ **BE PATIENT, the screen may remain blank for several minutes**  
-> In case you somehow managed to brick your system, the only way of restoring it yourself would be **direct ROM chip flashing using a programmer**, [[described in this guide|Guides/Sixunited_AXB35/Restoring_Corrupted_BIOS]].
+> In case you somehow managed to brick your system, the only way of restoring it yourself would be **direct ROM chip flashing using a programmer**, [described in this guide](../../../Guides/Sixunited_AXB35/Restoring_Corrupted_BIOS.md).
 
 
 ### Compatibility
@@ -98,6 +98,6 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 
 
 ### Relevant Pages
- - [[Hardware/Boards/Sixunited_AXB35]]
- - [[Hardware/PCs/GMKtec_EVO-X2]]
- - [[Guides/Sixunited_AXB35/Restoring_Corrupted_BIOS]]
+ - [Sixunited_AXB35](../Sixunited_AXB35.md)
+ - [GMKtec_EVO-X2](../../PCs/GMKtec_EVO-X2.md)
+ - [Restoring_Corrupted_BIOS](../../../Guides/Sixunited_AXB35/Restoring_Corrupted_BIOS.md)

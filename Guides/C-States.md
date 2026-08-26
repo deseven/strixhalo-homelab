@@ -6,7 +6,7 @@ When running Linux, especially older 6.x kernels, you might find that the CPU do
 ### Solution
 For some reason I couldn't make it work with either `acpi_cpufreq` or `amd_pstate`, but [CoreFreq](https://github.com/cyring/CoreFreq) turned out to be a perfect solution once again.
 
-Assuming that you already have it installed and working (otherwise check [[this guide|Guides/Hardware_Monitoring]] first):
+Assuming that you already have it installed and working (otherwise check [this guide](./Hardware_Monitoring.md) first):
 
 ```bash
 # /etc/kernel/cmdline

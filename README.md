@@ -2,7 +2,7 @@
 
 ### Welcome to the Strix Halo Wiki!
 
-The purpose of this website it to gather important information and practical guides for systems powered by AMD Ryzen AI MAX and MAX+ processors. Our [[guides|Guides]] cover various topics and of course there is a separate section for [[the AI ones|AI]]. You can also find some information on [[Strix Halo PCs|Hardware/PCs]] and [[boards|Hardware/Boards]].
+The purpose of this website it to gather important information and practical guides for systems powered by AMD Ryzen AI MAX and MAX+ processors. Our [guides](./Guides) cover various topics and of course there is a separate section for [the AI ones](./AI). You can also find some information on [Strix Halo PCs](./Hardware/PCs) and [boards](./Hardware/Boards).
 
 **Common use cases include:**
 - LLM development and inference systems
@@ -12,7 +12,7 @@ The purpose of this website it to gather important information and practical gui
 - Gaming systems
 - Home servers and NAS solutions
 
-Whether you're researching systems to purchase (by the way, we have [[a guide|Guides/Buyer's_Guide]] for that too!), setting up your first Strix Halo PC or troubleshooting issues, this wiki aims to provide the information you need.
+Whether you're researching systems to purchase (by the way, we have [a guide](./Guides/Buyer's_Guide.md) for that too!), setting up your first Strix Halo PC or troubleshooting issues, this wiki aims to provide the information you need.
 
 Make sure to also check [the Strix Halo Toolboxes project](https://strix-halo-toolboxes.com): probably the easiest way to integrate AI capabilities into Strix Halo without sacrificing performance.
 

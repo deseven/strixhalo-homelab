@@ -22,7 +22,7 @@ MSI's second AI-branded mini-PC / compact desktop, announced in January 2026 and
 
 ### Platform
 
-Built on the [[Sixunited AXB35 board|Hardware/Boards/Sixunited_AXB35]] platform.
+Built on the [Sixunited AXB35 board](../Boards/Sixunited_AXB35.md) platform.
 
 ### Notes
 
