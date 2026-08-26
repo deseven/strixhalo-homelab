@@ -2,9 +2,8 @@
 
 ### BIOS & EC Upgrade
 
-:::danger
-**DO NOT FLASH ANY FIRMWARE IF YOUR SYSTEM IS STABLE AND FUNCTIONING PROPERLY**, only consider a BIOS update if you have specific technical requirements or are experiencing any issues
-:::
+> [!WARNING]
+> **DO NOT FLASH ANY FIRMWARE IF YOUR SYSTEM IS STABLE AND FUNCTIONING PROPERLY**, only consider a BIOS update if you have specific technical requirements or are experiencing any issues
 
 All devices sent after the middle of May seem to have BIOS version of at least 1.04. The only officially supported upgrade way is using Windows, follow the included instructions. Something like [Hiren's BootCD](https://www.hirensbootcd.org) could be used as a more convenient option. If there's only ROM file available, download any other BIOS pack in zip archive, which has a flashing utility included. Note that **you're supposed to update EC firmware first and BIOS the last.**
 
@@ -30,9 +29,8 @@ A debug mode can be toggled by pressing **ALT+F5**, saving changes and rebooting
 
 ### Firmware Versions
 
-:::info
-If you happen to have BIOS or EC firmware versions not presented on this page and would like to share, please **[contact me directly](https://d7.wtf/contact)** or **[join our Discord](https://discord.gg/pnPRyucNrG)**
-:::
+> [!NOTE]
+> If you happen to have BIOS or EC firmware versions not presented on this page and would like to share, please **[contact me directly](https://d7.wtf/contact)** or **[join our Discord](https://discord.gg/pnPRyucNrG)**
 
 Firmware marked with ✅ is proven to be stable and could be recommended for using.
 

@@ -2,10 +2,9 @@
 
 ### Preparation
 
-:::info
-# Watching this video might help to understand the basics
-https://www.youtube.com/watch?v=HMTy3jQc39A ([mirror](https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/))
-:::
+> [!NOTE]
+> # Watching this video might help to understand the basics
+> https://www.youtube.com/watch?v=HMTy3jQc39A ([mirror](https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/))
 
 #### Tools Required
 - PTM7950 (30x30mm, 0.2-0.25 mm thick) or Noctua NT-H2 (or something similar, don't go lower)
