@@ -13,7 +13,7 @@ Custom cases for printing/machining:
 
 ### Power
 The board supports 3 different power limits - 55W (100W burst), 85W (120W burst), and 120W (140W burst):
-![AXB35 Power Modes](./axb35-power-modes.png)
+![AXB35 Power Modes](./Sixunited_AXB35/axb35-power-modes.png)
 
 See [[the guide on power and performance|Guides/Power_Modes_and_Performance]] for more info on power modes.
 
@@ -23,7 +23,7 @@ Idle power draw from the wall should be around 12W with two SSDs installed.
 The cooling system is decent enough for this form factor, but could suffer from inadequate thermal interface conductivity. So if you plan to use a full 120W power limit, switching to PTM7950 or similar products is highly recommended. You'll need a 30x30 mm piece of 0.2-0.25 mm thickness.
 
 Here's what you could expect from a correctly working system with PTM7950 (ambient temp +25°C, bios version 1.05):  
-![](./axb35-ptm7950-cooling.png)
+![](./Sixunited_AXB35/axb35-ptm7950-cooling.png)
 
 A guide for applying it on EVO-X2 is available [[here|Guides/Sixunited_AXB35/Replacing_Thermal_Interfaces_On_GMKtec_EVO-X2]].
 
@@ -46,11 +46,11 @@ See [[Firmware|Hardware/Boards/Sixunited_AXB35/Firmware]] page.
 
 | Photo | Description |
 | -------- | -------- |
-| [![SU_AXB35-02-v21](./axb35-02.jpeg?thumbnail)](./axb35-02.jpeg) | AXB35-02 V21 from GMKtec EVO-X2 |
-| [![SU_AXB35-02-v22 front](./axb35-02-v22.jpeg?thumbnail)](./axb35-02-v22.jpeg) [![SU_AXB35-02-v22 back](./axb35-02-v22-back.jpeg?thumbnail)](./axb35-02-v22-back.jpeg) | AXB35-02 V22 from more recent GMKtec EVO-X2 |
-| [![SU_AXB35-02-v22](./fa-ex9-board-mark.jpg?thumbnail)](./fa-ex9-board-mark.jpg) | AXB35-02 V22 in FEVM FA-EX9 |
-| [![SU_AXB35-02-v30](./axb35-02-v30.jpeg?thumbnail)](./axb35-02-v30.jpeg) | AXB35-02 V30 in FEVM FA-EX9 |
-| [![SU_AXB35](./axb35_board_with_cooling.jpg?thumbnail)](./axb35_board_with_cooling.jpg) | Earlier revision of the board with the cooling system |
+| [![SU_AXB35-02-v21](./Sixunited_AXB35/axb35-02.jpeg?thumbnail)](./Sixunited_AXB35/axb35-02.jpeg) | AXB35-02 V21 from GMKtec EVO-X2 |
+| [![SU_AXB35-02-v22 front](./Sixunited_AXB35/axb35-02-v22.jpeg?thumbnail)](./Sixunited_AXB35/axb35-02-v22.jpeg) [![SU_AXB35-02-v22 back](./Sixunited_AXB35/axb35-02-v22-back.jpeg?thumbnail)](./Sixunited_AXB35/axb35-02-v22-back.jpeg) | AXB35-02 V22 from more recent GMKtec EVO-X2 |
+| [![SU_AXB35-02-v22](./Sixunited_AXB35/fa-ex9-board-mark.jpg?thumbnail)](./Sixunited_AXB35/fa-ex9-board-mark.jpg) | AXB35-02 V22 in FEVM FA-EX9 |
+| [![SU_AXB35-02-v30](./Sixunited_AXB35/axb35-02-v30.jpeg?thumbnail)](./Sixunited_AXB35/axb35-02-v30.jpeg) | AXB35-02 V30 in FEVM FA-EX9 |
+| [![SU_AXB35](./Sixunited_AXB35/axb35_board_with_cooling.jpg?thumbnail)](./Sixunited_AXB35/axb35_board_with_cooling.jpg) | Earlier revision of the board with the cooling system |
 
 ### Relevant Pages
  - [[Hardware/Boards/Sixunited_AXB35/Firmware]]

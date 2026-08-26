@@ -21,7 +21,7 @@ Some people successfully bricked their PC when updating the BIOS and apart from 
 | Maximum Clock           | 104 MHz                            | 100 MHz                     |
 | Package                 | WSON8 (8x6 mm)                     | SOP-8 (3.9x4.9 mm)          |
 | Architecture            | 4KB Uniform Sector                 | -                           |
-| Photo                   | [![Winbond W25R256JWEQ](./axb35-bios-rom-chip.jpg?thumbnail)](./axb35-bios-rom-chip.jpg) | [![FUDAN FM25F01C](./axb35-ec-rom-chip.jpg?thumbnail)](./axb35-ec-rom-chip.jpg) |
+| Photo                   | [![Winbond W25R256JWEQ](./Restoring_Corrupted_BIOS/axb35-bios-rom-chip.jpg?thumbnail)](./Restoring_Corrupted_BIOS/axb35-bios-rom-chip.jpg) | [![FUDAN FM25F01C](./Restoring_Corrupted_BIOS/axb35-ec-rom-chip.jpg?thumbnail)](./Restoring_Corrupted_BIOS/axb35-ec-rom-chip.jpg) |
 
 
 ### Prerequisites
@@ -29,7 +29,7 @@ Some people successfully bricked their PC when updating the BIOS and apart from 
 Both ROM chips are located on the back side of the motherboard, so the PC needs to be disassembled first. Refer to this video for disassembly and **don't forget to remove the CMOS battery just in case**:  
 https://youtu.be/1zUyVSKtczU
 
-[![AXB35 ROM Chip Locations](./axb35-roms-location.jpg?thumbnail=400)](./axb35-roms-location.jpg)
+[![AXB35 ROM Chip Locations](./Restoring_Corrupted_BIOS/axb35-roms-location.jpg?thumbnail=400)](./Restoring_Corrupted_BIOS/axb35-roms-location.jpg)
 
 Items required for BIOS ROM (W25R256JWEQ) programming:
 - CH341A programmer
@@ -40,7 +40,7 @@ Items required for BIOS ROM (W25R256JWEQ) programming:
 - valid BIOS ROM (grab it from [[Firmware|Hardware/Boards/Sixunited_AXB35/Firmware]] page)
 - (optional) a spare W25R256JWEQ chip to test your setup
 
-[![CH341A programmer with adapter](./prereqs1.jpg?thumbnail=200)](./prereqs1.jpg) [![CH341A programmer with adapter assembled side](./prereqs2.jpg?thumbnail=200)](./prereqs2.jpg) [![CH341A programmer with adapter top](./prereqs3.jpg?thumbnail=200)](./prereqs3.jpg) [![WSON8 probe](./prereqs4.jpg?thumbnail=200)](./prereqs4.jpg)
+[![CH341A programmer with adapter](./Restoring_Corrupted_BIOS/prereqs1.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs1.jpg) [![CH341A programmer with adapter assembled side](./Restoring_Corrupted_BIOS/prereqs2.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs2.jpg) [![CH341A programmer with adapter top](./Restoring_Corrupted_BIOS/prereqs3.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs3.jpg) [![WSON8 probe](./Restoring_Corrupted_BIOS/prereqs4.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs4.jpg)
 
 All components can be purchased from Amazon or AliExpress. Be cautious when ordering the WSON8 probe - ensure it's the 8x6 mm variant, as 5x6 mm variants exist and are not compatible.
 
@@ -57,7 +57,7 @@ All components can be purchased from Amazon or AliExpress. Be cautious when orde
 4. Write, then read and verify the ROM to ensure your setup works correctly.
 5. Once you're sure that everything works fine, proceed to the next step.
 
-[![AsProgrammer](./programmer.png?thumbnail=400)](./programmer.png)
+[![AsProgrammer](./Restoring_Corrupted_BIOS/programmer.png?thumbnail=400)](./Restoring_Corrupted_BIOS/programmer.png)
 
 #### Step 2: Program the ROM
 1. Connect the WSON8 probe to the W25R256JWEQ chip on the motherboard.
@@ -67,7 +67,7 @@ All components can be purchased from Amazon or AliExpress. Be cautious when orde
 5. **Keep the probe steady for the entire duration** - this could take several minutes and poor contact will lead to write errors.
 6. After writing completes, verify that the ROM contents match your image file.
 
-[![BIOS ROM flashing with WSON8 probe](./flashing.jpg?thumbnail=400)](./flashing.jpg)
+[![BIOS ROM flashing with WSON8 probe](./Restoring_Corrupted_BIOS/flashing.jpg?thumbnail=400)](./Restoring_Corrupted_BIOS/flashing.jpg)
 
 #### Step 3: Lock the ROM
 You have two options to re-lock the ROM:

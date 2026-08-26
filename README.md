@@ -1,4 +1,4 @@
-![Strix Halo APU](./strix-halo.jpg)
+![Strix Halo APU](./README/strix-halo.jpg)
 
 ### Welcome to the Strix Halo Wiki!
 
@@ -26,4 +26,4 @@ Hope it helps :)
 - [Contact me](https://d7.wtf/contact) directly
 - [Report issues or suggest improvements](https://github.com/deseven/strixhalo-homelab/issues/new) on GitHub
 
-[![Join Strix Halo HomeLab Discord server](./join-us-discord.png)](https://discord.gg/pnPRyucNrG)
+[![Join Strix Halo HomeLab Discord server](./README/join-us-discord.png)](https://discord.gg/pnPRyucNrG)

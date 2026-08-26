@@ -1,6 +1,6 @@
 # HP Z2 Mini G1a
 
-![HP Z2 Mini G1a](./hp-z2-mini-g1a.jpg)
+![HP Z2 Mini G1a](./HP_Z2_Mini_G1a/hp-z2-mini-g1a.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.hp.com/us-en/workstations/z2-mini-a.html)]
 

@@ -42,14 +42,14 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **1.09 20260508** | N/A | Got from Bosgame support, `PCBV2.0X` mentioned in the filename doesn't seem to be important, the BIOS works even on the earliest revisions of the board. | [AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip](./AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip) |
->|| **1.07 20250912** | N/A | This BIOS was dumped from a unit bought in October 2025. | [AXB35-02_BOSGAME_SW1.07_20250912.rom](./AXB35-02_BOSGAME_SW1.07_20250912.rom) |
+>|| **1.09 20260508** | N/A | Got from Bosgame support, `PCBV2.0X` mentioned in the filename doesn't seem to be important, the BIOS works even on the earliest revisions of the board. | [AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip](./Firmware/AXB35-02_BOSGAME_SW1.09_PCBV2.0X_20260508.zip) |
+>|| **1.07 20250912** | N/A | This BIOS was dumped from a unit bought in October 2025. | [AXB35-02_BOSGAME_SW1.07_20250912.rom](./Firmware/AXB35-02_BOSGAME_SW1.07_20250912.rom) |
 >|
 >|**EC Firmware**
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **1.06** | N/A | N/A | [EC-AXB35-02-1.06-BG.zip](./EC-AXB35-02-1.06-BG.zip) |
+>|| **1.06** | N/A | N/A | [EC-AXB35-02-1.06-BG.zip](./Firmware/EC-AXB35-02-1.06-BG.zip) |
 
 >|# Corsair AI Workstation 300
 >|
@@ -61,7 +61,7 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **3.03** | N/A | This BIOS was dumped from a unit. | [AXB35-02_FEVM_SW3.03.rom](./AXB35-02_FEVM_SW3.03.rom) |
+>|| **3.03** | N/A | This BIOS was dumped from a unit. | [AXB35-02_FEVM_SW3.03.rom](./Firmware/AXB35-02_FEVM_SW3.03.rom) |
 
 >|# GMKtec EVO-X2
 >|
@@ -71,21 +71,21 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 >|
 >|| Version  | Official Changelog | Notes    | Download |
 >|| -------- | ------------------ | -------- | -------- |
->|| **1.12 20251209** | 1. Update the fan adjustment mode, changing from fan percentage to fan duty cycle adjustment<br>2. Optimize the phenomenon where the "O" key cannot be inputted under BIOS | Community found changes:<br>1. Custom curves are indeed there, but pretty limited.<br>2. <span style="color:red">The `O` problem was not fixed.</span><br>3. Minimum VRAM allocation is now 2GB.<br>4. Secure Boot gets disabled after flashing. | [AXB35-02_GMK_SW1.12_20251209.zip](./AXB35-02_GMK_SW1.12_20251209.zip) |
->|| **1.11 20251017** | N/A | Suddenly appeared on the GMK's Google Drive. Community found changes:<br>1. <span style="color:red">It's no longer possible to use the `O` key in the BIOS and on the boot level</span> (workaround: toggle Num Lock).<br>2. Minimum VRAM allocation is now 1GB, not 512MB. | [AXB35-02_GMK_SW1.11_20251017.zip](./AXB35-02_GMK_SW1.11_20251017.zip) |
->|| ✅ **1.05 20250729** | N/A | Suddenly appeared on the GMK's Google Drive. GMK's support said this is a final version of the previous **20250716** fix. | [AXB35-02_GMK_SW1.05_20250729.zip](./AXB35-02_GMK_SW1.05_20250729.zip) |
->|| **1.05 20250716** | Solve the problem of SD card reverse locking | Suddenly appeared on the GMK's Google Drive. | [AXB35-02_GMK_SW1.05_20250716.zip](./AXB35-02_GMK_SW1.05_20250716.zip) |
->|| ✅ **1.05 20250606** | N/A | According to Sixunited this one contains many changes from upstream and the rest is confidential. I personally noticed more conservative voltages and slightly improved temperature because of that. | [AXB35-02_GMK_SW1.05_20250606.zip](./AXB35-02_GMK_SW1.05_20250606.zip) |
->|| **1.04** | 1. Add virtualization<br>2. The first startup item is displayed as USB<br>3. The Core Performance Boost function is hidden<br>4. Add GFX Configuration in the BIOS to adjust the video memory<br>5. The BIOS adds a fan adjustment menu<br>6. Configure the BIOS at 64G/128G for automatic compatibility recognition | N/A | [AXB35-02_GMK_SW1.04_20250514.zip](./AXB35-02_GMK_SW1.04_20250514.zip) |
+>|| **1.12 20251209** | 1. Update the fan adjustment mode, changing from fan percentage to fan duty cycle adjustment<br>2. Optimize the phenomenon where the "O" key cannot be inputted under BIOS | Community found changes:<br>1. Custom curves are indeed there, but pretty limited.<br>2. <span style="color:red">The `O` problem was not fixed.</span><br>3. Minimum VRAM allocation is now 2GB.<br>4. Secure Boot gets disabled after flashing. | [AXB35-02_GMK_SW1.12_20251209.zip](./Firmware/AXB35-02_GMK_SW1.12_20251209.zip) |
+>|| **1.11 20251017** | N/A | Suddenly appeared on the GMK's Google Drive. Community found changes:<br>1. <span style="color:red">It's no longer possible to use the `O` key in the BIOS and on the boot level</span> (workaround: toggle Num Lock).<br>2. Minimum VRAM allocation is now 1GB, not 512MB. | [AXB35-02_GMK_SW1.11_20251017.zip](./Firmware/AXB35-02_GMK_SW1.11_20251017.zip) |
+>|| ✅ **1.05 20250729** | N/A | Suddenly appeared on the GMK's Google Drive. GMK's support said this is a final version of the previous **20250716** fix. | [AXB35-02_GMK_SW1.05_20250729.zip](./Firmware/AXB35-02_GMK_SW1.05_20250729.zip) |
+>|| **1.05 20250716** | Solve the problem of SD card reverse locking | Suddenly appeared on the GMK's Google Drive. | [AXB35-02_GMK_SW1.05_20250716.zip](./Firmware/AXB35-02_GMK_SW1.05_20250716.zip) |
+>|| ✅ **1.05 20250606** | N/A | According to Sixunited this one contains many changes from upstream and the rest is confidential. I personally noticed more conservative voltages and slightly improved temperature because of that. | [AXB35-02_GMK_SW1.05_20250606.zip](./Firmware/AXB35-02_GMK_SW1.05_20250606.zip) |
+>|| **1.04** | 1. Add virtualization<br>2. The first startup item is displayed as USB<br>3. The Core Performance Boost function is hidden<br>4. Add GFX Configuration in the BIOS to adjust the video memory<br>5. The BIOS adds a fan adjustment menu<br>6. Configure the BIOS at 64G/128G for automatic compatibility recognition | N/A | [AXB35-02_GMK_SW1.04_20250514.zip](./Firmware/AXB35-02_GMK_SW1.04_20250514.zip) |
 >|
 >|**EC Firmware**
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **1.10** | Added custom fan curves. | N/A | [EC-AXB35-02-1.10-GMK-A.zip](./EC-AXB35-02-1.10-GMK-A.zip) |
->|| ✅ **1.08** | N/A | No noticeable changes. | [EC-AXB35-02-1.08.zip](./EC-AXB35-02-1.08.zip) |
->|| ✅ **1.06** | N/A | Seems to have slightly quieter fan curves. | [EC-AXB35-02-1.06.zip](./EC-AXB35-02-1.06.zip) |
->|| ✅ **1.04** | N/A | First version that supports manual fan control. | [EC-AXB35-02-1.04.zip](./EC-AXB35-02-1.04.zip) |
+>|| **1.10** | Added custom fan curves. | N/A | [EC-AXB35-02-1.10-GMK-A.zip](./Firmware/EC-AXB35-02-1.10-GMK-A.zip) |
+>|| ✅ **1.08** | N/A | No noticeable changes. | [EC-AXB35-02-1.08.zip](./Firmware/EC-AXB35-02-1.08.zip) |
+>|| ✅ **1.06** | N/A | Seems to have slightly quieter fan curves. | [EC-AXB35-02-1.06.zip](./Firmware/EC-AXB35-02-1.06.zip) |
+>|| ✅ **1.04** | N/A | First version that supports manual fan control. | [EC-AXB35-02-1.04.zip](./Firmware/EC-AXB35-02-1.04.zip) |
 
 >|# Sixunited Generic (AIFUT, NIMO, etc)
 >|
@@ -93,8 +93,8 @@ Firmware marked with ✅ is proven to be stable and could be recommended for usi
 >|
 >|| Version  | Official Changelog | Notes | Download |
 >|| -------- | ------------------ | ----- | -------- |
->|| **1.06 20250620** | N/A | This BIOS was dumped from AIFUT unit. | [AXB35-02_SIXUNITED_SW1.06_20250620.rom](./AXB35-02_SIXUNITED_SW1.06_20250620.rom) |
->|| **3.04 20250819** | N/A | This BIOS was provided by Sixunited support. | [AXB35-02_SIXUNITED_SW3.04_20250819.zip](./AXB35-02_SIXUNITED_SW3.04_20250819.zip) |
+>|| **1.06 20250620** | N/A | This BIOS was dumped from AIFUT unit. | [AXB35-02_SIXUNITED_SW1.06_20250620.rom](./Firmware/AXB35-02_SIXUNITED_SW1.06_20250620.rom) |
+>|| **3.04 20250819** | N/A | This BIOS was provided by Sixunited support. | [AXB35-02_SIXUNITED_SW3.04_20250819.zip](./Firmware/AXB35-02_SIXUNITED_SW3.04_20250819.zip) |
 
 
 ### Relevant Pages

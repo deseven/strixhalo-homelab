@@ -1,6 +1,6 @@
 # Framework Desktop
 
-![Framework Desktop](./framework-desktop.jpg)
+![Framework Desktop](./Framework_Desktop/framework-desktop.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://frame.work/desktop)]
 

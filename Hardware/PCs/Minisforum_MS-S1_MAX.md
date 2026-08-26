@@ -1,6 +1,6 @@
 # Minisforum MS-S1 MAX
 
-![Minisforum MS-S1 MAX](./minisforum-ms-s1-max.jpg)
+![Minisforum MS-S1 MAX](./Minisforum_MS-S1_MAX/minisforum-ms-s1-max.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://store.minisforum.com/products/minisforum-ms-s1-max-mini-pc)]
 

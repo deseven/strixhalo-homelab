@@ -27,10 +27,10 @@ options corefreqk Register_ClockSource=1 Register_CPU_Freq=1 Register_Governor=1
 Don't forget to run `update-initramfs -u -k all` and reboot after making these changes.
 
 To check that it works, run `corefreq-cli` and go first to **Menu > Settings**, make sure that CPU-IDLE driver is ON:
-![](./c-states-check1.png)
+![](./C-States/c-states-check1.png)
 
 Then go to **Menu > Kernel data**, make sure that CPU-Idle driver is set to `corefreqk-idle` and that the Idle Limit is set to C6:
-![](./c-states-check2.png)
+![](./C-States/c-states-check2.png)
 
 Finally, in the **Frequency** or **Idle C-States** views you'll be able to see that the CPU now actually goes to lower frequencies/power:
-![](./working-c-states.png)
+![](./C-States/working-c-states.png)

@@ -12,7 +12,7 @@ One of Strix Halo's main selling points is its 128GB of unified memory. This mak
 Context size is also something to keep in mind: **prompt processing and text generation speeds take a major hit as context grows**. This is true for all hardware, but Strix Halo takes a worse relative hit vs NVIDIA GPUs. Depending on model size and architecture, going over 64k, 32k, and in some cases even 16k of context can mean very long waits, and much slower performance. If you are having chat conversations and the prior context is cached, then you may not be as heavily impacted, but for agentic or document processing use cases, you will need to run these non-interactively (or expect long waits).
 
 Here is an example of the performance drop that happens as context size grows:  
-![](./strix-halo-pp-tg-ctx.png)
+![](./Buyer's_Guide/strix-halo-pp-tg-ctx.png)
 
 **General rule: look at benchmarks with the specific model and context size you're interested in.** The [[AI section|AI/AI_Capabilities_Overview]] of our wiki has links to some community-generated benchmarks, but if you can't find your specific model, ask in [our Discord](https://discord.gg/pnPRyucNrG) for someone to test it for you. This is important - don't give in to hype only to be disappointed later.
 
@@ -35,7 +35,7 @@ With that said, my personal opinion about the best use case is basically a kind 
 There are four main types of Strix Halo-based devices: mini PCs, AIOs, laptops, and handhelds. Laptops and handhelds are typically power and cooling limited, so their performance is generally lower. However, the difference between 55W and 120W power limits isn't that massive ([[5-35% depending on the task|Guides/Power_Modes_and_Performance]]). This guide is mostly centered on mini PCs since this seems to be the most popular option.
 
 There are several different models of Strix Halo APUs available:  
-![Strix Halo APU Specs](./strix-halo-specs.png)
+![Strix Halo APU Specs](./Buyer's_Guide/strix-halo-specs.png)
 
 Each APU comes with 32, 64, 96, or 128GB of onboard RAM that can be shared with the iGPU statically or dynamically. I'd personally recommend sticking to the best available option, which is the AI Max+ 395, but of course it's up to you and your preferred use case. Note that some manufacturers don't even provide options with lower-tier APUs.
 
@@ -64,7 +64,7 @@ Based on the survey data, **[[GMKtec EVO-X2|Hardware/PCs/GMKtec_EVO-X2]]** and *
 ## Size and Noise
 
 To evaluate the case sizes, there is [a great infographic created by RexYuan](https://gist.github.com/RexYuan/3fc27edcd12475e496eb20946f8c8485):  
-![Strix Halo PC Sizes](./strix-halo-pc-sizes.png)
+![Strix Halo PC Sizes](./Buyer's_Guide/strix-halo-pc-sizes.png)
 
 Most Strix Halo mini PCs are considered noisy in general. The typical cooling solution for almost every PC except for the Framework's consists of two high-RPM blowers that create enough pressure to push sufficient air through the heatsink. On the full 120W power limit, it's almost guaranteed to be noisy no matter what you do. If you have a chance to put the PC in a separate room and only work with it remotely (SSH, RDP, streaming, etc), this might be ideal.
 

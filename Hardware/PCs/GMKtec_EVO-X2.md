@@ -1,6 +1,6 @@
 # GMKtec EVO-X2
 
-![GMKtec EVO-X2](./gmktec-evo-x2.jpg)
+![GMKtec EVO-X2](./GMKtec_EVO-X2/gmktec-evo-x2.jpg)
 
 [[OFFICIAL PRODUCT PAGE](https://www.gmktec.com/products/amd-ryzen™-ai-max-395-evo-x2-ai-mini-pc)]
 
@@ -16,8 +16,8 @@ The first mini PC with Strix Halo, available in 64G and 128G versions. It's base
 ### Drivers & User Manual
 Latest Windows drivers are available [on the GMKtec website](https://www.gmktec.com/pages/drivers-and-software). Mirrors for direct download:
  - [Windows 11 Drivers](https://d7.wtf/s/EVO-X2_Win11_24H2_Driver_list_V007.zip)
- - [User Manual](./EVO-X2_User_Manual.pdf)
- - [ImagesShow](./ImagesShowSetUpOSDV2.4_20231221.exe) (GMK's OSD utility for Windows to display current power mode)
+ - [User Manual](./GMKtec_EVO-X2/EVO-X2_User_Manual.pdf)
+ - [ImagesShow](./GMKtec_EVO-X2/ImagesShowSetUpOSDV2.4_20231221.exe) (GMK's OSD utility for Windows to display current power mode)
 
 You can also download AMD drivers directly from AMD, there is no vendor lock.
 
