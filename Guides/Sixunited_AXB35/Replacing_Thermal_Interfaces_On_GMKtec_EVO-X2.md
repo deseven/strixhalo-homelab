@@ -66,5 +66,5 @@ https://www.youtube.com/watch?v=HMTy3jQc39A ([mirror](https://www.reddit.com/r/G
 After reassembly, boot the device and monitor temperatures to ensure proper cooling performance. Note that in case of PTM7950 the temperature could improve over the course of several days and multiple burn-ins on max temp are recommended.
 
 ### Relevant Pages
- - [[Hardware/PCs/GMKtec_EVO-X2]]
- - [[Hardware/Boards/Sixunited_AXB35]]
+ - [GMKtec_EVO-X2](../../Hardware/PCs/GMKtec_EVO-X2.md)
+ - [Sixunited_AXB35](../../Hardware/Boards/Sixunited_AXB35.md)

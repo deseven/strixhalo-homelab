@@ -1,19 +1,47 @@
 #!/usr/bin/env python3
 """
-convert-links.py - rewrite otterwiki attachment links for GitHub.
+convert-links.py - rewrite wiki (OtterWiki) links for GitHub.
 
-Otterwiki stores page attachments in a directory next to the page
-(e.g. `Guides/Buyer's_Guide/strix-halo-specs.png` for `Guides/Buyer's_Guide.md`),
-but pages reference them with plain relative paths like `./strix-halo-specs.png`.
-On GitHub such a link resolves relative to the page's own directory, missing
-the attachment directory, which produces broken `/blob/main/...` links.
+The wiki stores page attachments in a directory next to the page
+(e.g. `Guides/Buyer's_Guide/strix-halo-specs.png` for `Guides/Buyer's_Guide.md`)
+and links between pages with wiki-style `[[...]]` links. Both render
+incorrectly on GitHub:
 
-This script rewrites every inline link/image destination so that it goes
-through the page's attachment directory, e.g.
+* Attachment links like `./strix-halo-specs.png` resolve relative to the
+  page's own directory, missing the attachment directory, which produces
+  broken `/blob/main/...` links.
+* `[[alias|Target/Page]]` is not markdown at all.
 
-    ![](./strix-halo-specs.png)   ->   ![](./Buyer's_Guide/strix-halo-specs.png)
+This script rewrites:
 
-Rules:
+1. Inline link/image destinations so they go through the page's attachment
+   directory, e.g.
+
+       ![](./strix-halo-specs.png)   ->   ![](./Buyer's_Guide/strix-halo-specs.png)
+
+2. Wiki links into plain markdown links, e.g.
+
+       [[EVO-X2|Hardware/PCs/GMKtec_EVO-X2]]
+         ->  [EVO-X2](Hardware/PCs/GMKtec_EVO-X2.md)
+       [[Hardware/Boards/Sixunited_AXB35]]
+         ->  [Hardware/Boards/Sixunited_AXB35](Hardware/Boards/Sixunited_AXB35.md)
+       [[OFFICIAL PRODUCT PAGE](https://example.com/page)]
+         ->  [OFFICIAL PRODUCT PAGE](https://example.com/page)
+
+Wiki link rules:
+* `[[alias|target]]` keeps the alias as link text; `[[target]]` uses the last
+  path component (page name) as text.
+* `[[text](https://external.url)]` wraps a markdown link in wiki markup - the
+  outer brackets are unwrapped, keeping the link itself untouched.
+* Targets are resolved against the repo root, so a leading `/` is handled
+  (`[[Power Mode and Fan Control|/Guides/...]]`), as are `#anchors`
+  (`AI/AI_Capabilities_Overview#rocm` -> `AI/AI_Capabilities_Overview.md#rocm`).
+* The `.md` suffix is added when the target is a page; targets that are
+  directories (wiki sections like `Guides`, `AI`, `Hardware/PCs`) stay as
+  directory links computed relative to the page.
+* Targets that resolve to nothing are reported and left untouched.
+
+Attachment link rules:
 * Only relative destinations that look like attachments (image/pdf/zip/rom/
   bin/exe/... extension) are touched; external URLs, anchors, `.md` links and
   wiki `[[...]]` links are left alone.
@@ -26,20 +54,22 @@ Rules:
 * Nested constructs like `[![alt](./x.jpg?thumbnail)](./x.jpg)` are handled -
   both destinations are rewritten.
 * Already-rewritten links are detected and left untouched (idempotent).
-* Content inside fenced code blocks (```) is never touched.
+
+Content inside fenced code blocks (```) is never touched.
 
 Usage:
     python3 .tools/convert-links.py          # rewrite in place
     python3 .tools/convert-links.py --dry-run
 
-Exit codes: 0 = all attachment links accounted for; 1 = some links could not
-be resolved (they are listed on stderr).
+Exit codes: 0 = all links accounted for; 1 = some links could not be resolved
+(they are listed on stderr).
 """
 
 from __future__ import annotations
 
 import argparse
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -55,6 +85,9 @@ ATTACHMENT_EXTS = {
 
 # Documented attachment-directory exceptions: page name -> directory name.
 DOC_DIRS = {"README": "README"}
+
+# Wiki embedded links: [[alias|target]] or [[target]].
+WIKI_RE = re.compile(r"\[\[([^\[\]]+)\]\]")
 
 
 # ---------------------------------------------------------------------------
@@ -110,7 +143,7 @@ def find_links(line: str) -> list[tuple[int, int, int, str]]:
 
 
 # ---------------------------------------------------------------------------
-# destination conversion
+# destination conversion (attachment links)
 # ---------------------------------------------------------------------------
 
 def is_attachment_name(name: str) -> bool:
@@ -144,10 +177,10 @@ def convert_dest(
     attach_dir: Path | None,
     warned: set[str],
 ) -> tuple[str | None, bool]:
-    """Convert one link destination.
+    """Convert one attachment link destination.
 
-    Returns (new_dest, changed); new_dest is None when the link is an
-    attachment that could not be resolved (a warning is emitted once).
+    Returns (new_dest, changed); new_dest is None when the link could not be
+    resolved (a warning is emitted once).
     """
     if not dest or dest.startswith(("http://", "https://", "mailto:", "#", "/")):
         return dest, False
@@ -232,12 +265,96 @@ def process_line(
 
 
 # ---------------------------------------------------------------------------
+# destination conversion (wiki links)
+# ---------------------------------------------------------------------------
+
+def resolve_wiki_target(raw: str) -> Path | None:
+    """Resolve a wiki link target against the repo root.
+
+    Returns the file (for pages) or directory (for wiki sections), or None
+    when the target does not exist.
+    """
+    if not raw or raw.startswith(("#", "http://", "https://", "mailto:")):
+        return None
+    norm = os.path.normpath(raw.strip("/"))
+    if norm.startswith("..") or os.path.isabs(norm):
+        return None
+
+    candidate = ROOT / norm
+    if candidate.is_file():
+        return candidate
+    if (ROOT / (norm + ".md")).is_file():
+        return ROOT / (norm + ".md")
+    if candidate.is_dir():
+        return candidate
+    # maybe the target already ends with .md but transitively contains one?
+    return None
+
+
+def convert_wikilinks(
+    line: str,
+    page: Path,
+    warned: set[str],
+) -> tuple[str, int, int]:
+    """Rewrite wiki-style [[...]] links inside one line.
+
+    Returns (new_line, changed, skipped).
+    """
+    if "[[" not in line:
+        return line, 0, 0
+
+    changed = skipped = 0
+
+    def repl(match: re.Match[str]) -> str:
+        nonlocal changed, skipped
+        content = match.group(1)
+        alias, sep, target = content.partition("|")
+        if not sep:
+            alias, target = "", content.strip()
+        else:
+            alias, target = alias.strip(), target.strip()
+
+        raw_target, hash_sep, fragment = target.partition("#")
+        resolved = resolve_wiki_target(raw_target)
+        if resolved is None:
+            key = f"{page}:[[{content}]]"
+            if key not in warned:
+                warned.add(key)
+                print(f"  ! skipped un-resolvable wiki link [[{content}]] in {page}",
+                      file=sys.stderr)
+            skipped += 1
+            return match.group(0)
+
+        # Link text: the alias when given, otherwise the page/section name
+        # (the wiki would render the page title; the file name is the closest
+        # substitute we have).
+        text = alias
+        if not text:
+            name = os.path.basename(str(resolved))
+            if name.endswith(".md"):
+                name = name[:-3]
+            text = name
+
+        rel = os.path.relpath(resolved, page.parent).replace(os.sep, "/")
+        if not rel.startswith((".", "/")):
+            rel = "./" + rel
+        if hash_sep and fragment:
+            rel += "#" + fragment
+
+        changed += 1
+        return f"[{text}]({rel})"
+
+    new_line = WIKI_RE.sub(repl, line)
+    return new_line, changed, skipped
+
+
+# ---------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Rewrite wiki attachment links so they work on GitHub.",
+        description="Rewrite wiki attachment and [[...]] links so they work on GitHub.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
@@ -264,7 +381,15 @@ def main() -> int:
                 continue
             if in_fence:
                 continue
+
             new_line, c, s = process_line(line, page, attach_dir, warned)
+            changed += c
+            skipped += s
+            if c:
+                lines[idx] = new_line
+                line = new_line
+
+            new_line, c, s = convert_wikilinks(line, page, warned)
             changed += c
             skipped += s
             if c:

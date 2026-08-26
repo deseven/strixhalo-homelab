@@ -39,7 +39,7 @@ Of course, to build, you need some dependencies sorted.
 First, you should run the latest Linux (6.16+) and linux-firmware (git).
 
 ## ROCm
-You'll need ROCm installed first before you can build. For best performance you'll want to use the latest ROCm/TheRock nightlies. See: [[AI_Capabilities_Overview|AI/AI_Capabilities_Overview#rocm]]
+You'll need ROCm installed first before you can build. For best performance you'll want to use the latest ROCm/TheRock nightlies. See: [AI_Capabilities_Overview](./AI_Capabilities_Overview.md#rocm)
 
 
 To build, you may need to make sure your environment variables are properly set. If so, take a look at [https://github.com/lhl/strix-halo-testing/blob/main/rocm-therock-env.sh](https://github.com/lhl/strix-halo-testing/blob/main/rocm-therock-env.sh) for an example of what this might look like. Change `ROCM_PATH` to whatever your ROCm path is.

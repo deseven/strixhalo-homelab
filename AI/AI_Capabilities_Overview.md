@@ -150,12 +150,12 @@ NOTE: Ollama does not support Vulkan or AMD GPUs in general very well in general
 The easiest way to get llama.cpp to work is with the Vulkan backend. This reliable and relatively performant on both Windows and Linux and you can either [build it yourself](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md#vulkan) or simply [download the latest release](https://github.com/ggml-org/llama.cpp/releases) for your OS.
 - For Vulkan on Linux, you should install both the AMDVLK and Mesa RADV drivers. When both are installed AMDVLK will be the default Vulkan driver, which is generally fine as it's `pp` can be up to 2X faster than Mesa RADV. You can set `AMD_VULKAN_ICD=RADV` to switch to the RADV to compare. The latter tends to have slightly higher `tg` speed, hold up better in long context, and be slightly more reliable, so you should test both and see which works better for you.
 
-If you want to use the ROCm backend (the rocWMMA FA implementation in particular can offer huge (eg 2X) `pp` performance advantages vs Vulkan), the easiest way is to use kyuz0's [AMD Strix Halo Llama.cpp Toolboxes](https://github.com/kyuz0/amd-strix-halo-toolboxes) container builds or Lemonade's [llamacpp-rocm](https://github.com/lemonade-sdk/llamacpp-rocm) builds. If you're looking to build your own, please refer to: [[llamacpp-with-ROCm|AI/llamacpp-with-ROCm]]
+If you want to use the ROCm backend (the rocWMMA FA implementation in particular can offer huge (eg 2X) `pp` performance advantages vs Vulkan), the easiest way is to use kyuz0's [AMD Strix Halo Llama.cpp Toolboxes](https://github.com/kyuz0/amd-strix-halo-toolboxes) container builds or Lemonade's [llamacpp-rocm](https://github.com/lemonade-sdk/llamacpp-rocm) builds. If you're looking to build your own, please refer to: [llamacpp-with-ROCm](./llamacpp-with-ROCm.md)
 
 If you are using the llama.cpp ROCm backend, you may want to also try to use the hipBLASlt kernel with the `ROCBLAS_USE_HIPBLASLT=1` environment variable as it is sometimes faster than the default rocBLAS kernels.
 
 For more on how to test llama.cpp performance:
-- [[AI/llamacpp-performance]]
+- [llamacpp-performance](./llamacpp-performance.md)
 
 ### Additional Resources
  - Reproducible local LLM setup and benchmark evidence: [Strix Halo Guide](https://github.com/hogeheer499-commits/strix-halo-guide) - copyable Ubuntu, Vulkan/RADV, Ollama, and llama.cpp setup; structured benchmark claims; raw logs; failed paths; and cross-system community reproductions

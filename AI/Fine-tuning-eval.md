@@ -45,5 +45,5 @@ A working reference implementation of this pattern — orchestrator wiring, GGUF
 
 ## Related
 
-- [[llamacpp-with-ROCm|AI/llamacpp-with-ROCm]] — the ROCm build llama-perplexity comes from
-- [[AI_Capabilities_Overview|AI/AI_Capabilities_Overview]] — broader hardware/software context
+- [llamacpp-with-ROCm](./llamacpp-with-ROCm.md) — the ROCm build llama-perplexity comes from
+- [AI_Capabilities_Overview](./AI_Capabilities_Overview.md) — broader hardware/software context

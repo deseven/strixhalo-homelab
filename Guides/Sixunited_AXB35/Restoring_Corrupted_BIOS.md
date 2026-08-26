@@ -1,6 +1,6 @@
 # Restoring Corrupted BIOS
 
-Some people successfully bricked their PC when updating the BIOS and apart from manually flashing the ROM chip itself there doesn't seem to be any options. The following guide describes how to restore the BIOS ROM on the [[AXB35 board|Hardware/Boards/Sixunited_AXB35]] ([[GMKtec EVO-X2 PC|Hardware/PCs/GMKtec_EVO-X2]]), also mentioning basic details for the EC one.
+Some people successfully bricked their PC when updating the BIOS and apart from manually flashing the ROM chip itself there doesn't seem to be any options. The following guide describes how to restore the BIOS ROM on the [AXB35 board](../../Hardware/Boards/Sixunited_AXB35.md) ([GMKtec EVO-X2 PC](../../Hardware/PCs/GMKtec_EVO-X2.md)), also mentioning basic details for the EC one.
 
 > [!NOTE]
 > The original information was provided by `tecchan1225` here:  
@@ -37,7 +37,7 @@ Items required for BIOS ROM (W25R256JWEQ) programming:
 - WSON8-compatible probe (the one included with the CH341A is not suitable)
 - programming PC (Windows was used this time)
 - programming software (AsProgrammer v3.17)
-- valid BIOS ROM (grab it from [[Firmware|Hardware/Boards/Sixunited_AXB35/Firmware]] page)
+- valid BIOS ROM (grab it from [Firmware](../../Hardware/Boards/Sixunited_AXB35/Firmware.md) page)
 - (optional) a spare W25R256JWEQ chip to test your setup
 
 [![CH341A programmer with adapter](./Restoring_Corrupted_BIOS/prereqs1.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs1.jpg) [![CH341A programmer with adapter assembled side](./Restoring_Corrupted_BIOS/prereqs2.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs2.jpg) [![CH341A programmer with adapter top](./Restoring_Corrupted_BIOS/prereqs3.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs3.jpg) [![WSON8 probe](./Restoring_Corrupted_BIOS/prereqs4.jpg?thumbnail=200)](./Restoring_Corrupted_BIOS/prereqs4.jpg)
@@ -81,5 +81,5 @@ Alternatively, If you have soldering experience and equipment, you can desolder 
 
 
 ### Relevant Pages
- - [[Hardware/Boards/Sixunited_AXB35]]
- - [[Hardware/PCs/GMKtec_EVO-X2]]
+ - [Sixunited_AXB35](../../Hardware/Boards/Sixunited_AXB35.md)
+ - [GMKtec_EVO-X2](../../Hardware/PCs/GMKtec_EVO-X2.md)
