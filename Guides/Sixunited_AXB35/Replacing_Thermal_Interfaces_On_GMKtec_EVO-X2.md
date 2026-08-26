@@ -3,7 +3,7 @@
 ### Preparation
 
 > [!NOTE]
-> # Watching this video might help to understand the basics
+> Watching this video might help to understand the basics
 > https://www.youtube.com/watch?v=HMTy3jQc39A ([mirror](https://www.reddit.com/r/GMKtec/comments/1km6tn8/evox2_teardown/))
 
 #### Tools Required
