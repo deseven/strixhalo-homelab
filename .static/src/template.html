@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" class="wa-theme-default wa-palette-default wa-brand-blue">
+<head>
+  <script>
+    // Follow the OS/browser color scheme: apply wa-light/wa-dark so the Web
+    // Awesome theme tokens and the page shell share one coherent look.
+    (() => {
+      const root = document.documentElement;
+      const dark = window.matchMedia("(prefers-color-scheme: dark)");
+      const apply = (dark) => {
+        root.classList.toggle("wa-dark", dark);
+        root.classList.toggle("wa-light", !dark);
+      };
+      apply(dark.matches);
+      dark.addEventListener("change", (e) => apply(e.matches));
+    })();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title><%= title %> · Strix Halo HomeLab Wiki</title>
+  <link rel="icon" href="<%= rawUrl('README/amd-favicon.png') %>">
+  <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/themes/default.css">
+  <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/utilities.css">
+  <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/native.css">
+  <script type="module" src="https://ka-f.webawesome.com/webawesome@3.12.0/webawesome.loader.js"></script>
+  <style>
+    /* ---- page shell ---- */
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      min-height: 0;
+    }
+    @media (min-width: 64rem) {
+      .layout {
+        /* Sidebar | content | TOC. The two nav rails are kept deliberately
+           slim (~16rem and ~13rem) so the central reading column gets more
+           room. */
+        grid-template-columns: 16rem minmax(0, 1fr) 13rem;
+      }
+      .layout.no-toc {
+        grid-template-columns: 16rem minmax(0, 1fr);
+      }
+    }
+
+    aside.sidebar {
+      display: none;
+      background: var(--wa-color-surface-container);
+      border-inline-end: 1px solid var(--wa-color-surface-border);
+      overflow-y: auto;
+    }
+    @media (min-width: 64rem) {
+      aside.sidebar { display: flex; flex-direction: column; }
+    }
+    .sidebar-header {
+      padding: 1rem 1.25rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--wa-color-surface-border);
+    }
+    .sidebar-header a { color: var(--wa-color-text); text-decoration: none; }
+    .sidebar-header a:hover { color: var(--wa-color-primary-600); }
+    .sidebar-brand {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .sidebar-favicon {
+      width: 1.5rem; height: 1.5rem;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .sidebar-search {
+      position: sticky; top: 0; z-index: 1;
+      padding: 0.5rem 1rem;
+      background: color-mix(in srgb, var(--wa-color-surface-container) 85%, transparent);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--wa-color-surface-border);
+    }
+    .sidebar-search input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.375rem 0.75rem;
+      font: inherit; font-size: 0.875rem;
+      color: var(--wa-color-text);
+      background: var(--wa-color-surface);
+      border: 1px solid var(--wa-color-surface-border);
+      border-radius: 0.5rem;
+    }
+    .sidebar-search input:focus { outline: 2px solid var(--wa-color-primary-500); outline-offset: 1px; }
+    .sidebar-tree { padding: 0.75rem 0.75rem 1rem; flex: 1; }
+
+    main { overflow-y: auto; min-width: 0; }
+
+    .content-wrap {
+      /* Slightly wider than classic 65ch so tables and code get breathing
+         room, now that the nav rails are slimmer. */
+      max-width: 78ch;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+    .page-title {
+      margin: 0 0 1.5rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--wa-color-text-strong);
+    }
+    .page-footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--wa-color-surface-border);
+      font-size: 0.75rem;
+      color: var(--wa-color-text-muted);
+      display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem;
+    }
+    .page-footer a { color: var(--wa-color-text); }
+    .page-footer a:hover { color: var(--wa-color-primary-500); }
+
+    .sidebar-open { display: block; }
+    @media (min-width: 64rem) {
+      .sidebar-open { display: flex; }
+    }
+
+    /* ---- mobile drawer ---- */
+    #mobile-tree {
+      position: fixed; inset: 0; z-index: 30; display: none;
+    }
+    #mobile-tree.open { display: block; }
+    #mobile-tree .backdrop {
+      position: absolute; inset: 0;
+      background: rgb(0 0 0 / 0.6);
+    }
+    #mobile-tree .drawer {
+      position: absolute; left: 0; top: 0; height: 100%;
+      width: 20rem; max-width: 85vw;
+      background: var(--wa-color-surface-container);
+      border-inline-end: 1px solid var(--wa-color-surface-border);
+      overflow-y: auto; padding: 1rem;
+    }
+    #menu-btn {
+      position: fixed; bottom: 1rem; left: 1rem; z-index: 40;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.625rem 1rem;
+      font: inherit; font-size: 0.875rem; font-weight: 600;
+      color: var(--wa-color-on-primary, #fff);
+      background: var(--wa-color-primary-600);
+      border: 0; border-radius: 9999px;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.4);
+      cursor: pointer;
+    }
+    @media (min-width: 64rem) { #menu-btn { display: none; } }
+    #menu-btn:hover { background: var(--wa-color-primary-500); }
+
+    /* ---- content prose ---- */
+    #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+      scroll-margin-top: 1.5rem;
+    }
+    /* GitHub-style alerts (markdown-alert markup emitted by markdown-it-github-alerts).
+       The left border is deliberately thick and tinted per type so alerts
+       read as highlighted call-outs, not plain gray boxes. */
+    .markdown-alert {
+      border-left: 6px solid var(--wa-color-surface-border);
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0.75rem 1rem;
+      background: color-mix(in srgb, var(--wa-color-surface-lowered) 45%, transparent);
+      margin: 1rem 0;
+    }
+    .markdown-alert > p { margin: 0.25rem 0; }
+    .markdown-alert-title {
+      font-weight: 700;
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .markdown-alert-title svg { width: 1em; height: 1em; fill: currentColor; }
+    /* Accent colors that read well on both light and dark surfaces. */
+    .markdown-alert-note        { border-left-color: #0b5cad; }
+    .markdown-alert-note .markdown-alert-title { color: #0b5cad; }
+    .markdown-alert-tip         { border-left-color: #16794c; }
+    .markdown-alert-tip .markdown-alert-title { color: #16794c; }
+    .markdown-alert-important   { border-left-color: #6b40c2; }
+    .markdown-alert-important .markdown-alert-title { color: #6b40c2; }
+    .markdown-alert-warning     { border-left-color: #9a6700; }
+    .markdown-alert-warning .markdown-alert-title { color: #9a6700; }
+    .markdown-alert-caution     { border-left-color: #cf222e; }
+    .markdown-alert-caution .markdown-alert-title { color: #cf222e; }
+    /* Dark mode: brighter tint variants that read well on dark surfaces. */
+    .wa-dark .markdown-alert-note        { border-left-color: #58a6ff; }
+    .wa-dark .markdown-alert-note .markdown-alert-title { color: #58a6ff; }
+    .wa-dark .markdown-alert-tip         { border-left-color: #3fb950; }
+    .wa-dark .markdown-alert-tip .markdown-alert-title { color: #3fb950; }
+    .wa-dark .markdown-alert-important   { border-left-color: #bc8cff; }
+    .wa-dark .markdown-alert-important .markdown-alert-title { color: #bc8cff; }
+    .wa-dark .markdown-alert-warning     { border-left-color: #d29922; }
+    .wa-dark .markdown-alert-warning .markdown-alert-title { color: #d29922; }
+    .wa-dark .markdown-alert-caution     { border-left-color: #f85149; }
+    .wa-dark .markdown-alert-caution .markdown-alert-title { color: #f85149; }
+
+    /* ---- TOC ---- */
+    #toc-nav { position: sticky; top: 0; }
+    .toc-header {
+      padding: 1rem 1.25rem;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--wa-color-text-muted);
+      border-bottom: 1px solid var(--wa-color-surface-border);
+    }
+    #toc { padding: 1rem 1rem 1.5rem; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.125rem; }
+
+    /* ---- tables: allow wrapping of long words/URLs ---- */
+    /* WA native tables don't break long unbroken strings, so wide cells push
+       the table out of the content column. Allow breaking anywhere so big
+       words wrap instead. */
+    #content table {
+      table-layout: auto;
+      min-width: 0;
+    }
+    #content table th,
+    #content table td {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    #toc a {
+      color: var(--wa-color-text-muted);
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.375rem;
+    }
+    #toc a:hover { color: var(--wa-color-text); background: color-mix(in srgb, var(--wa-color-surface-container) 50%, transparent); }
+    #toc a.toc-level-2 { padding-left: 0.5rem; }
+    #toc a.toc-level-3 { padding-left: 1.25rem; }
+    #toc a.toc-level-4 { padding-left: 2rem; }
+    #toc a.toc-active { color: var(--wa-color-primary-500); font-weight: 600; }
+
+    /* ---- tree sizing ---- */
+    wa-tree { font-size: 0.875rem; }
+    wa-tree-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+    wa-tree-item a:hover { color: var(--wa-color-primary-500); }
+    wa-tree-item.selected a { color: var(--wa-color-primary-500); font-weight: 600; }
+    .tree-section-header {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-weight: 600;
+      color: var(--wa-color-text);
+    }
+    .tree-section-header wa-icon { color: var(--wa-color-primary-500); }
+
+    /* tree filter states (toggled by site.js) */
+    wa-tree-item.item-hidden { display: none; }
+    wa-tree-item a.item-link-hidden { display: none; }
+
+    /* Hide the raw (un-upgraded) custom elements until Web Awesome's
+       definitions load, so the tree doesn't flash as a blob of text.
+       The [hidden] attribute (set by site.js once the components are
+       upgraded) is essential because the browsers don't style
+       :not(:defined) until the elements are upgraded. */
+    wa-tree:not(:defined),
+    wa-tree wa-tree-item:not(:defined) {
+      display: none;
+    }
+    wa-tree[hidden],
+    wa-tree-item[hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout <%= hasToc ? '' : 'no-toc' %>">
+
+    <!-- left: page tree -->
+    <aside class="sidebar" id="sidebar-desktop">
+      <div class="sidebar-header">
+        <a class="sidebar-brand" href="<%= homeHref %>">
+          <img class="sidebar-favicon" src="<%= rawUrl('README/amd-favicon.png') %>" alt="" aria-hidden="true">
+          <span>Strix&nbsp;Halo&nbsp;Wiki</span>
+        </a>
+      </div>
+      <div class="sidebar-search">
+        <input id="tree-search" type="search" placeholder="Filter pages…" aria-label="Filter pages">
+      </div>
+      <nav id="tree" class="sidebar-tree" aria-label="Wiki pages" data-active-key="<%= escapeHtml(activeKey) %>">
+        <%- tree %>
+      </nav>
+    </aside>
+
+    <!-- center: content -->
+    <main>
+      <div class="content-wrap">
+        <h1 class="page-title"><%= title %></h1>
+        <article id="content" class="wa-prose">
+          <%- content %>
+        </article>
+        <footer class="page-footer">
+          <% if (!isDirIndex) { %>
+          <span>Generated from
+            <a href="<%= rawUrl(rawPageHref) %>"><%= fileName %></a>
+          </span>
+          <span class="opacity-40">·</span>
+          <% } %>
+          <a href="<%= ghUrl %>">View on GitHub</a>
+        </footer>
+      </div>
+    </main>
+
+    <% if (hasToc) { %>
+    <!-- right: on-this-page -->
+    <aside id="toc-nav" aria-label="On this page">
+      <div class="toc-header">On this page</div>
+      <nav id="toc" aria-label="Table of contents">
+        <%- toc %>
+      </nav>
+    </aside>
+    <% } %>
+
+  </div>
+
+  <!-- mobile tree -->
+  <div id="mobile-tree" aria-hidden="true" data-active-key="<%= escapeHtml(activeKey) %>">
+    <div class="backdrop" data-close></div>
+    <div class="drawer">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+        <span class="tree-section-header">
+          <img class="sidebar-favicon" src="<%= rawUrl('README/amd-favicon.png') %>" alt="" aria-hidden="true">
+          <span>Strix&nbsp;Halo&nbsp;Wiki</span>
+        </span>
+        <button data-close aria-label="Close" style="background:none;border:0;color:var(--wa-color-text-muted);font-size:1.25rem;cursor:pointer;">✕</button>
+      </div>
+      <%- tree %>
+    </div>
+  </div>
+  <button id="menu-btn">☰ Pages</button>
+
+  <script><%- inlineJs %></script>
+</body>
+</html>
