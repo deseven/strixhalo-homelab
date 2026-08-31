@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This copy is no longer maintained, use [kyuz0/strixhalo-homelab](https://github.com/kyuz0/strixhalo-homelab)
+
 ![Strix Halo APU](./README/strix-halo.jpg)
 
 ### Welcome to the Strix Halo Wiki!
